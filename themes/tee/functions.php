@@ -122,16 +122,102 @@ function tee_widgets_init() {
 }
 add_action( 'widgets_init', 'tee_widgets_init' );
 
+if ( ! function_exists( 'tee_editor_styles' ) ) :
+	/* Enqueue editor styles. */
+	function tee_editor_styles() {
+		// Add styles inline.
+		wp_add_inline_style( 'wp-block-library', tee_get_font_face_styles() );
+	}
+endif;
+add_action( 'admin_init', 'tee_editor_styles' );
+
+if ( ! function_exists( 'tee_get_font_face_styles' ) ) :
+
+	/* Get font face styles. */
+	function tee_get_font_face_styles() {
+		return "
+		@font-face{
+			font-family: 'Chivo';
+			font-weight: 300;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+			src: url('" . get_theme_file_uri( 'assets/fonts/Chivo-Light.ttf' ) . "') format('ttf');
+		}
+		@font-face{
+			font-family: 'Chivo';
+			font-weight: 300;
+			font-style: italic;
+			font-stretch: normal;
+			font-display: swap;
+			src: url('" . get_theme_file_uri( 'assets/fonts/Chivo-LightItalic.ttf' ) . "') format('ttf');
+		}
+		@font-face{
+			font-family: 'Chivo';
+			font-weight: 400;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+			src: url('" . get_theme_file_uri( 'assets/fonts/Chivo-Regular.ttf' ) . "') format('ttf');
+		}
+		@font-face{
+			font-family: 'Chivo';
+			font-weight: 400;
+			font-style: italic;
+			font-stretch: normal;
+			font-display: swap;
+			src: url('" . get_theme_file_uri( 'assets/fonts/Chivo-Italic.ttf' ) . "') format('ttf');
+		}
+		@font-face{
+			font-family: 'Chivo';
+			font-weight: 700;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+			src: url('" . get_theme_file_uri( 'assets/fonts/Chivo-Bold.ttf' ) . "') format('ttf');
+		}
+		@font-face{
+			font-family: 'Chivo';
+			font-weight: 700;
+			font-style: italic;
+			font-stretch: normal;
+			font-display: swap;
+			src: url('" . get_theme_file_uri( 'assets/fonts/Chivo-BoldItalic.ttf' ) . "') format('ttf');
+		}
+		@font-face{
+			font-family: 'Chivo';
+			font-weight: 900;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+			src: url('" . get_theme_file_uri( 'assets/fonts/Chivo-Black.ttf' ) . "') format('ttf');
+		}
+		@font-face{
+			font-family: 'Chivo';
+			font-weight: 900;
+			font-style: italic;
+			font-stretch: normal;
+			font-display: swap;
+			src: url('" . get_theme_file_uri( 'assets/fonts/Chivo-BlackItalic.ttf' ) . "') format('ttf');
+		}
+		";
+	}
+endif;
+
+if ( ! function_exists( 'tee_preload_webfonts' ) ) :
+	/** Preloads the main web font to improve performance. */
+	function tee_preload_webfonts() {
+		?>
+		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/Chivo-Regular.ttf' ) ); ?>" as="font" type="font/ttf" crossorigin>
+		<?php
+	}
+endif;
+add_action( 'wp_head', 'tee_preload_webfonts' );
+
 /**
  * Enqueue scripts and styles.
  */
 function tee_scripts() {
-	wp_enqueue_style(
-		'tee-style',
-		get_stylesheet_uri(),
-		array(),
-		TEE_VERSION
-	);
 
 	// Foundations Version 6.7.4
 	wp_enqueue_style(
@@ -140,6 +226,15 @@ function tee_scripts() {
 		array(),
 		'6.7.4'
 	);
+	
+	wp_enqueue_style(
+		'tee-style',
+		get_stylesheet_uri(),
+		array(),
+		TEE_VERSION
+	);
+	// Add styles inline.
+	wp_add_inline_style( 'tee-style', tee_get_font_face_styles() );
 
 	wp_enqueue_script(
 		'what-input-script',
