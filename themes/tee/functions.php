@@ -126,19 +126,19 @@ add_action( 'widgets_init', 'tee_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tee_scripts() {
+	wp_enqueue_style(
+		'tee-style',
+		get_stylesheet_uri(),
+		array(),
+		TEE_VERSION
+	);
+
 	// Foundations Version 6.7.4
 	wp_enqueue_style(
 		'foundation-style',
 		get_template_directory_uri() . '/assets/css/vendor/foundation.min.css',
 		array(),
 		'6.7.4'
-	);
-
-	wp_enqueue_style(
-		'tee-style',
-		get_stylesheet_uri(),
-		array(),
-		TEE_VERSION
 	);
 
 	wp_enqueue_script(

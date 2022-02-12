@@ -1,3 +1,25 @@
+/* Variables */
+:root {
+    /* Colors */
+    --colour-tblack: #363636;
+    --colour-tgrey: #737373;
+    --colour-tlightgrey: #c6c6c8;
+    --colour-twhite: #fff;
+    --colour-tblue: #5b9ef0;
+    --colour-tred: #ee4d4d;
+    --colour-tpink: #ff3aca;
+
+    /* Font Sizes */
+    --fontsize-extra-large: 42px;
+    --fontsize-large: 35px;
+    --fontsize-medium: 30px;
+    --fontsize-below-medium: 26px;
+    --fontsize-above-avg: 20px;
+    --fontsize-normal: 18px;
+    --fontsize-small: 16px;
+    --fontsize-extra-small: 12px;
+}
+
 /* Content Widths */
 .entry-content > *:not(.alignfull) {
     max-width: 990px;
@@ -11,12 +33,27 @@
     width: 100%;
 }
 
+/* Button Blocks */
+.wp-block-button {
+    height: 46px;
+    background-color: var(--colour-tblack);
+    border-radius: 3px;
+    font-size: var(--fontsize-below-medium);
+    transition: background-color 0.4s;
+}
+.wp-block-button__link {
+    padding: 0 1em;
+    transition: background-color 0.4s;
+}
+.wp-block-button:hover, .wp-block-button:hover > * {
+    background-color: var(--colour-tblue);
+}
+
 /* Quote Blocks */
 blockquote {
-    border-left-width: 0;
+    border-left-width: 0 !important; /* foundations override */
 }
 .wp-block-quote {
-    color: #363636;
     font-size: 24px;
     font-style: normal;
     width: fit-content;
@@ -29,10 +66,11 @@ blockquote {
     background-position: top left;
 }
 .wp-block-quote p {
-    border-bottom: 1px solid #5b9ef0;
+    border-bottom: 1px solid var(--colour-tblue);
     margin-bottom: 0;
     padding-bottom: 6px;
     text-align: left;
+    color: var(--colour-tblack);
 }
 .wp-block-quote cite {
     font-size: 17px;
@@ -49,8 +87,6 @@ blockquote {
 
 /* Pullquote Blocks */
 .wp-block-pullquote {
-    /* background-color: #ee4d4d;
-    color: white; */
     background-image: url(../img/icons/quote-marks-large.png);
     background-repeat: no-repeat;
     background-position: top left;

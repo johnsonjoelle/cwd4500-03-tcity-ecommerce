@@ -9,3 +9,6 @@ wp.blocks.registerBlockStyle( 'core/quote', {
 wp.domReady( function () {
     wp.blocks.unregisterBlockStyle( 'core/quote', 'plain' );
 } );
+wp.domReady( function () {
+    wp.blocks.unregisterBlockStyle( 'core/button', 'outline' );
+} );
