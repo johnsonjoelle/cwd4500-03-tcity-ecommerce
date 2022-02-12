@@ -247,3 +247,23 @@ blockquote {
 .wp-block-embed.is-type-video {
     text-align: center;
 }
+
+/* Column Blocks */
+.wp-block-column.is-style-blue-column {
+    border-left: 4px solid var(--colour-tblue);
+    padding-left: 10px;
+}
+.wp-block-column.is-style-red-column {
+    border-left: 4px solid var(--colour-tred);
+    padding-left: 10px;
+}
+
+/* Group Blocks */
+.wp-block-group:not(.wp-block-group > .wp-block-group) {
+    border-top: 8px solid var(--colour-tblack);
+    border-bottom: 8px solid var(--colour-tblack);
+    padding: 10px 0;
+}
+.wp-container-6207e20aa1d00.wp-block-group {
+    border-width: 0;
+}
