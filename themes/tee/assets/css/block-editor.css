@@ -1,0 +1,60 @@
+/* Content Widths */
+.entry-content > *:not(.alignfull) {
+    max-width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.alignwide {
+    max-width: 1190px;
+}
+.alignfull {
+    width: 100%;
+}
+
+/* Quote Blocks */
+.wp-block-quote {
+    color: #363636;
+    font-size: 24px;
+    font-style: normal;
+    width: fit-content;
+    max-width: 750px;
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 35px;
+    padding-top: 1px;
+    background-image: url(../img/icons/quote-marks-reg.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+.wp-block-quote p {
+    border-bottom: 1px solid #5b9ef0;
+    margin-bottom: 0;
+    padding-bottom: 6px;
+    text-align: left;
+}
+.wp-block-quote cite {
+    font-size: 17px;
+    font-style: normal;
+}
+.wp-block-quote.is-style-large {
+    background-image: url(../img/icons/quote-marks-large.png);
+    font-style: normal;
+    font-size: 42px;
+}
+.wp-block-quote.is-style-large {
+    font-size: 30px;
+}
+
+/* Pullquote Blocks */
+.wp-block-pullquote {
+    /* background-color: #ee4d4d;
+    color: white; */
+    background-image: url(../img/icons/quote-marks-large.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+.wp-block-pullquote.is-style-solid-color p {
+    background-image: url(../img/icons/quote-marks-white.png);
+    font-size: 42px;
+}

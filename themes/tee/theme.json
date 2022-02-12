@@ -1,0 +1,54 @@
+{
+    "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+    "version": 2,
+    "settings": {
+        "color": {
+            "defaultPalette": false,
+            "customGradient": false,
+            "defaultGradients": false,
+            "palette": [
+                {
+                    "name": "T-Black",
+                    "slug": "tblack",
+                    "color": "#363636"
+                },
+                {
+                    "name": "T-Grey",
+                    "slug": "tgray",
+                    "color": "#737373"
+                },
+                {
+                    "name": "T-Light Grey",
+                    "slug": "tlgrey",
+                    "color": "#c6c6c8"
+                },
+                {
+                    "name": "White",
+                    "slug": "white",
+                    "color": "#ffffff"
+                },
+                {
+                    "name": "T-Blue",
+                    "slug": "tblue",
+                    "color": "#5b9ef0"
+                },
+                {
+                    "name": "T-Red",
+                    "slug": "tred",
+                    "color": "#ee4d4d"
+                }
+            ]
+        },
+        "layout": {
+            "contentSize": "910px",
+            "wideSize": "1190px"
+        },
+        "blocks": {
+            "core/button": {
+                "border": {
+                    "customRadius": false
+                }
+            }
+        }
+    }
+}

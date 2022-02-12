@@ -1,0 +1,8 @@
+# Default block quote class
+.wp-block-quote
+
+# Large block quote class
+.is-style-large
+
+# Default pullquote class
+.wp-block-pullquote
