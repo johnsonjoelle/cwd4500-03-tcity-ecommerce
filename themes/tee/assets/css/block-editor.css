@@ -25,7 +25,21 @@ body {
     font-family: "Chivo"!important;
     font-weight: 400;
     font-size: 18px;
+    background-color: rgb(199, 180, 180);
 }
+
+/* Header */
+.site-header {
+    background-color: #e0e0e1;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.site-header.white-header {
+    background-color: #ffffff80;
+}
+/* .main-navigation {
+
+} */
 
 /* Captions */
 figcaption {

@@ -22,7 +22,7 @@
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'tee' ), 'tee', '<a href="https://joellejohnson.com">Joelle Johnson</a>' );
+				printf( esc_html__( 'Theme: Salted Tea by %2$s.', 'tee' ), 'tee', '<a href="https://joellejohnson.com">Joelle Johnson</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
