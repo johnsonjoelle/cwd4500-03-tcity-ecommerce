@@ -39,6 +39,53 @@
                 }
             ]
         },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFamily": "Chivo, sans-serif",
+                    "name": "\"Chivo\", sans-serif",
+                    "slug": "chivo"
+                }
+            ],
+            "fontSizes": [
+                {
+                    "name": "Extra-Small",
+                    "size": "12px",
+                    "slug": "x-small"
+                },
+                {
+                    "size": "16px",
+                    "slug": "small"
+                },
+                {
+                    "name": "Default",
+                    "size": "18px",
+                    "slug": "regular"
+                },
+                {
+                    "name": "Above Average",
+                    "size": "20px",
+                    "slug": "above-avg"
+                },
+                {
+                    "name": "Sub Medium",
+                    "size": "26px",
+                    "slug": "below-medium"
+                },
+                {
+                    "size": "30px",
+                    "slug": "medium"
+                },
+                {
+                    "size": "35px",
+                    "slug": "large"
+                },
+                {
+                    "size": "42px",
+                    "slug": "x-large"
+                }
+            ]
+        },
         "layout": {
             "contentSize": "910px",
             "wideSize": "1190px"
@@ -46,7 +93,7 @@
         "blocks": {
             "core/button": {
                 "border": {
-                    "customRadius": false
+                    "radius": false
                 }
             }
         }
