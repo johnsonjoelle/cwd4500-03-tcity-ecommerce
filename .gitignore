@@ -16,6 +16,8 @@ uploads
 upgrade
 
 # Wordpress plugin folders
+plugins/akismet
+plugins/wpforms-lite
 
 #SRC files
 node_modules
