@@ -21,12 +21,18 @@ wp.domReady( function () {
     wp.blocks.unregisterBlockStyle( 'core/image', 'rounded' );
 } );
 
+// * Media & Text Blocks
+wp.blocks.registerBlockStyle( 'core/media-text', {
+    name: 'border-left-meditxt',
+    label: 'Border Text Left',
+} );
+
 // * Button Blocks
 wp.domReady( function () {
     wp.blocks.unregisterBlockStyle( 'core/button', 'outline' );
 } );
 
-// Column Blocks
+// * Column Blocks
 wp.blocks.registerBlockStyle( 'core/column', {
     name: 'blue-column',
     label: 'Blue Border Left',

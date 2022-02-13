@@ -26,9 +26,9 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'tee' ); ?></a>
 
 	<?php if ( is_front_page() ) :?>
-	<header id="masthead" class="site-header white-header grid-x">
+	<header id="masthead" class="site-header white-header grid-x align-middle">
 	<?php else : ?>
-	<header id="masthead" class="site-header grid-x">
+	<header id="masthead" class="site-header grid-x  align-middle">
 	<?php endif; ?>
 		<div class="site-branding cell small-12 medium-3">
 			<?php
@@ -37,7 +37,6 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation cell small-12 medium-9">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tee' ); ?></button>
 			<?php
 			wp_nav_menu(
 				array(
