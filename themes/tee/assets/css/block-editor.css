@@ -19,6 +19,7 @@
     --fontsize-normal: 18px;
     --fontsize-small: 16px;
     --fontsize-extra-small: 12px;
+    font-size: var(--fontsize-normal);
 }
 
 body {
@@ -40,6 +41,20 @@ body {
 /* .main-navigation {
 
 } */
+
+/* Page Templates */
+/* Narrow Pages */
+.narrow-content {
+    border-left-width: 8px;
+    border-left-style: solid;
+    padding-left: 20px;
+}
+.narrow-content.narrow-red {
+    border-color: var(--colour-tred);
+}
+.narrow-content.narrow-blue {
+    border-color: var(--colour-tblue);
+}
 
 /* Captions */
 figcaption {
