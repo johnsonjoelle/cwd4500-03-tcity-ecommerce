@@ -30,7 +30,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<div class="narrow-content narrow-red">
+		<div class="barleft-content barleft-red">
 			<?php 
 			tee_post_thumbnail(); 
 			the_content(
