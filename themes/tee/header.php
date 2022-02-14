@@ -26,7 +26,8 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'tee' ); ?></a>
 
 	<?php if ( is_front_page() ) :?>
-	<header id="masthead" class="site-header white-header grid-x align-middle">
+	<div id="tee-front-page-wrapper">
+		<header id="masthead" class="site-header white-header grid-x align-middle">
 	<?php else : ?>
 	<header id="masthead" class="site-header grid-x  align-middle">
 	<?php endif; ?>

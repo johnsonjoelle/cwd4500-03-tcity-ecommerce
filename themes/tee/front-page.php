@@ -44,6 +44,6 @@ get_header();
 		?>
 
 	</main><!-- #main -->
-
+</div><!-- #tee-front-page-wrapper (starts in header.php)-->
 <?php
 get_footer();

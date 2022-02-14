@@ -12,6 +12,10 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+		<div class="tee-footer-top">
+			<p><?php bloginfo( 'name' ); ?> &copy; Copyright 2022</p>
+		</div>
+		<div class="tee-footer-divider"></div>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'tee' ) ); ?>">
 				<?php
