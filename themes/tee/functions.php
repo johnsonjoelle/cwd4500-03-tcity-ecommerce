@@ -135,84 +135,14 @@ if ( ! function_exists( 'tee_get_font_face_styles' ) ) :
 
 	/* Get font face styles. */
 	function tee_get_font_face_styles() {
-		return "
-		@font-face{
-			font-family: 'Chivo';
-			font-weight: 300;
-			font-style: normal;
-			font-stretch: normal;
-			font-display: swap;
-			src: url('" . get_theme_file_uri( 'assets/fonts/Chivo-Light.ttf' ) . "') format('ttf');
-		}
-		@font-face{
-			font-family: 'Chivo';
-			font-weight: 300;
-			font-style: italic;
-			font-stretch: normal;
-			font-display: swap;
-			src: url('" . get_theme_file_uri( 'assets/fonts/Chivo-LightItalic.ttf' ) . "') format('ttf');
-		}
-		@font-face{
-			font-family: 'Chivo';
-			font-weight: 400;
-			font-style: normal;
-			font-stretch: normal;
-			font-display: swap;
-			src: url('" . get_theme_file_uri( 'assets/fonts/Chivo-Regular.ttf' ) . "') format('ttf');
-		}
-		@font-face{
-			font-family: 'Chivo';
-			font-weight: 400;
-			font-style: italic;
-			font-stretch: normal;
-			font-display: swap;
-			src: url('" . get_theme_file_uri( 'assets/fonts/Chivo-Italic.ttf' ) . "') format('ttf');
-		}
-		@font-face{
-			font-family: 'Chivo';
-			font-weight: 700;
-			font-style: normal;
-			font-stretch: normal;
-			font-display: swap;
-			src: url('" . get_theme_file_uri( 'assets/fonts/Chivo-Bold.ttf' ) . "') format('ttf');
-		}
-		@font-face{
-			font-family: 'Chivo';
-			font-weight: 700;
-			font-style: italic;
-			font-stretch: normal;
-			font-display: swap;
-			src: url('" . get_theme_file_uri( 'assets/fonts/Chivo-BoldItalic.ttf' ) . "') format('ttf');
-		}
-		@font-face{
-			font-family: 'Chivo';
-			font-weight: 900;
-			font-style: normal;
-			font-stretch: normal;
-			font-display: swap;
-			src: url('" . get_theme_file_uri( 'assets/fonts/Chivo-Black.ttf' ) . "') format('ttf');
-		}
-		@font-face{
-			font-family: 'Chivo';
-			font-weight: 900;
-			font-style: italic;
-			font-stretch: normal;
-			font-display: swap;
-			src: url('" . get_theme_file_uri( 'assets/fonts/Chivo-BlackItalic.ttf' ) . "') format('ttf');
-		}
-		";
-	}
-endif;
-
-if ( ! function_exists( 'tee_preload_webfonts' ) ) :
-	/** Preloads the main web font to improve performance. */
-	function tee_preload_webfonts() {
 		?>
-		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/Chivo-Regular.ttf' ) ); ?>" as="font" type="font/ttf" crossorigin>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 		<?php
 	}
 endif;
-add_action( 'wp_head', 'tee_preload_webfonts' );
+add_action( 'wp_head', 'tee_get_font_face_styles' );
 
 /**
  * Enqueue scripts and styles.
@@ -233,8 +163,6 @@ function tee_scripts() {
 		array(),
 		TEE_VERSION
 	);
-	// Add styles inline.
-	wp_add_inline_style( 'tee-style', tee_get_font_face_styles() );
 
 	wp_enqueue_script(
 		'what-input-script',
