@@ -15,13 +15,22 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main tee-front-page">
 		<?php if( has_post_thumbnail() ) : ?>
-			<section id="front-page-banner">
+			<section class="tee-front-page-banner">
+				<div class="tee-banner-img">
 				<?php 
 				the_post_thumbnail();
 				?>
-				<!-- feature image? -->
+				</div>
+				<div class="tee-banner-tagline">
+				<?php
+				$tee_description = get_bloginfo( 'description', 'display' );
+				if ( $tee_description || is_customize_preview() ) :
+					?>
+					<p class="site-description"><?php echo $tee_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<?php endif; ?>
+				</div>
 			</section>
 		<?php
 		endif;

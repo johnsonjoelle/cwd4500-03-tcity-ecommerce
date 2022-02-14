@@ -33,6 +33,8 @@ body {
 .site-header {
     background-color: #e0e0e1;
     padding: 10px 30px;
+    position: relative;
+    z-index: 99;
 }
 .site-header.white-header {
     background-color: #ffffff80;
@@ -40,7 +42,7 @@ body {
 .main-navigation .menu {
     justify-content: flex-end;
     text-transform: uppercase;
-    font-size: var(--fontsize-medium);
+    font-size: var(--fontsize-below-medium);
     font-weight: 700;
 }
 .main-navigation .menu-item a {
@@ -49,6 +51,31 @@ body {
 }
 .main-navigation .menu-item a:hover, .main-navigation .menu-item a:focus {
     color: var(--colour-tblue);
+}
+.site {
+    position: relative;
+}
+.tee-front-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.tee-front-page-banner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-height: 100vh;
+}
+.tee-front-page-banner .tee-banner-img {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    overflow-y: hidden;
+}
+.tee-front-page-banner .tee-banner-tagline {
+    grid-column: 1/-1;
+    grid-row: 2/-1;
+    font-size: calc(1.8 * var(--fontsize-page-title));
+    padding-left: 1em;
 }
 
 /* Page Templates */
