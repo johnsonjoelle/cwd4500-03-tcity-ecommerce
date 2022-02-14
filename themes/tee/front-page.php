@@ -16,15 +16,20 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-        <section>
-            <!-- feature image? -->
-        </section>
-
+		<?php if( has_post_thumbnail() ) : ?>
+			<section id="front-page-banner">
+				<?php 
+				the_post_thumbnail();
+				?>
+				<!-- feature image? -->
+			</section>
 		<?php
+		endif;
+
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+			get_template_part( 'template-parts/content', 'front' );
 
 		endwhile; // End of the loop.
 		?>
