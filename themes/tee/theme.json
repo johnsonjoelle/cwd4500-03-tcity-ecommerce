@@ -40,13 +40,6 @@
             ]
         },
         "typography": {
-            "fontFamilies": [
-                {
-                    "fontFamily": "Chivo, sans-serif",
-                    "name": "\"Chivo\", sans-serif",
-                    "slug": "chivo"
-                }
-            ],
             "fontSizes": [
                 {
                     "name": "Extra-Small",

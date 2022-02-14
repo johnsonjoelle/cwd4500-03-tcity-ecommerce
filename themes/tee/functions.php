@@ -122,19 +122,10 @@ function tee_widgets_init() {
 }
 add_action( 'widgets_init', 'tee_widgets_init' );
 
-if ( ! function_exists( 'tee_editor_styles' ) ) :
-	/* Enqueue editor styles. */
-	function tee_editor_styles() {
-		// Add styles inline.
-		wp_add_inline_style( 'wp-block-library', tee_get_font_face_styles() );
-	}
-endif;
-add_action( 'admin_init', 'tee_editor_styles' );
-
-if ( ! function_exists( 'tee_get_font_face_styles' ) ) :
+if ( ! function_exists( 'tee_preload_webfonts' ) ) :
 
 	/* Get font face styles. */
-	function tee_get_font_face_styles() {
+	function tee_preload_webfonts() {
 		?>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -142,7 +133,7 @@ if ( ! function_exists( 'tee_get_font_face_styles' ) ) :
 		<?php
 	}
 endif;
-add_action( 'wp_head', 'tee_get_font_face_styles' );
+add_action( 'wp_head', 'tee_preload_webfonts' );
 
 /**
  * Enqueue scripts and styles.
