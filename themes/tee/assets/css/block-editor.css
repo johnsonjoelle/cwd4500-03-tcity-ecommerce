@@ -332,6 +332,9 @@ blockquote {
 }
 
 /* Column Blocks */
+.wp-block-columns {
+    margin-bottom: 0;
+}
 .wp-block-column.is-style-blue-column {
     border-left: 4px solid var(--colour-tblue);
     padding-left: 10px;
@@ -342,14 +345,14 @@ blockquote {
 }
 
 /* Group Blocks */
-.wp-block-group:not(.wp-block-group > .wp-block-group) {
+.wp-block-group.is-style-sandwich-group {
     border-top: 8px solid var(--colour-tblack);
     border-bottom: 8px solid var(--colour-tblack);
     padding: 10px 0;
 }
-.wp-container-6207e20aa1d00.wp-block-group {
+/* .wp-container-6207e20aa1d00.wp-block-group {
     border-width: 0;
-}
+} */
 
 /* Footer */
 .site-footer p {

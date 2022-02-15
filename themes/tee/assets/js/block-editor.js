@@ -27,6 +27,12 @@ wp.blocks.registerBlockStyle( 'core/media-text', {
     label: 'Border Text Left',
 } );
 
+// * Group Blocks
+wp.blocks.registerBlockStyle( 'core/group', {
+    name: 'sandwich-group',
+    label: 'Sandwich',
+} );
+
 // * Button Blocks
 wp.domReady( function () {
     wp.blocks.unregisterBlockStyle( 'core/button', 'outline' );
