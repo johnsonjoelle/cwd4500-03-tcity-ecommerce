@@ -19,18 +19,20 @@
 	<?php tee_post_thumbnail(); ?>
 
 	<div class="entry-content">
-		<div class="narrow-content">
-			<?php
-			the_content();
+		<div class="narrow-container">
+			<div class="narrow-content">
+				<?php
+				the_content();
 
-			wp_link_pages(
-				array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'tee' ),
-					'after'  => '</div>',
-				)
-			);
-			?>
-		</div><!-- .narrow-content -->
+				wp_link_pages(
+					array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'tee' ),
+						'after'  => '</div>',
+					)
+				);
+				?>
+			</div><!-- .narrow-content -->
+		</div><!-- .narrow-container -->
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>

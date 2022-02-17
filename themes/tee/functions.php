@@ -154,6 +154,12 @@ function tee_scripts() {
 		array(),
 		TEE_VERSION
 	);
+	wp_enqueue_style(
+		'tee-responsive-style',
+		get_template_directory_uri() . '/assets/css/responsive.css',
+		array(),
+		TEE_VERSION
+	);
 
 	wp_enqueue_script(
 		'what-input-script',

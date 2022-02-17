@@ -1,0 +1,51 @@
+@media screen and (max-width: 1299px) {
+    .has-x-large-font-size {
+        font-size: calc(0.8 * var(--fontsize-extra-large));
+    }
+    .has-large-font-size {
+        font-size: calc(0.8 * var(--fontsize-large));
+    }
+    .has-large-medium-size {
+        font-size: calc(0.8 * var(--fontsize-medium));
+    }
+    /* .has-large-font-size {
+        font-size: calc(0.8 * var(--fontsize-large));
+    }
+    .has-large-font-size {
+        font-size: calc(0.8 * var(--fontsize-large));
+    }
+    .has-large-font-size {
+        font-size: calc(0.8 * var(--fontsize-large));
+    }
+    .has-large-font-size {
+        font-size: calc(0.8 * var(--fontsize-large));
+    } */
+}
+@media screen and (max-width: 991px) {
+    .narrow-content {
+        max-width: 100%;
+    }
+    .tee-banner-img img {
+        max-height: 100%;
+        max-width: none;
+        margin-left: -50%;
+    }
+    .has-x-large-font-size {
+        font-size: calc(0.6 * var(--fontsize-extra-large));
+    }
+    .has-large-font-size {
+        font-size: calc(0.8 * var(--fontsize-large));
+    }
+    .has-large-medium-size {
+        font-size: calc(0.8 * var(--fontsize-medium));
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .entry-title {
+        font-size: calc(0.8 * var(--fontsize-page-title));
+    }
+    .site-footer .site-info {
+        font-size: var(--fontsize-extra-small);
+    }
+}
