@@ -20,6 +20,7 @@ plugins/akismet
 plugins/wpforms-lite
 plugins/woocommerce-services
 plugins/woocommerce-payments
+plugins/woo-gutenberg-products-block
 
 #SRC files
 node_modules
