@@ -76,6 +76,11 @@
                 {
                     "size": "42px",
                     "slug": "x-large"
+                },
+                {
+                    "name": "Extra Extra Large",
+                    "size": "80px",
+                    "slug": "xx-large"
                 }
             ]
         },
