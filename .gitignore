@@ -16,7 +16,6 @@ uploads
 upgrade
 
 # Wordpress plugin folders
-plugins/akismet
 plugins/wpforms-lite
 plugins/woocommerce-services
 plugins/woocommerce-payments
