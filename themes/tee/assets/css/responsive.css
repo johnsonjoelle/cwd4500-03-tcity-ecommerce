@@ -41,6 +41,13 @@
         font-size: calc(1.2 * var(--fontsize-page-title));
     }
 }
+@media screen and (max-width: 720px) {
+    #icon-menu {
+        display: block;
+        height: 60px;
+        width: auto;
+    }
+}
 
 @media screen and (max-width: 450px) {
     .entry-title {

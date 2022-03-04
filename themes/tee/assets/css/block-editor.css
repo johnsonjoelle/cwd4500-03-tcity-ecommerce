@@ -97,6 +97,9 @@ body {
 .main-navigation .menu-item a:hover, .main-navigation .menu-item a:focus {
     color: var(--colour-tblue);
 }
+#icon-menu {
+    display: none;
+}
 
 /* Page Templates */
 /* Bar Left Templates */
