@@ -38,6 +38,7 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation cell small-12 medium-9">
+			<!-- Add button do normal css/js link to 'primary-menu' id tag -->
 			<?php
 			wp_nav_menu(
 				array(
