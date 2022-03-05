@@ -18,3 +18,4 @@ add_filter( 'use_block_editor_for_post_type', 'tee_use_block_editor_for_post_typ
 add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 // Add Product Title
 add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_title', 4 );
+// Move Short Description
