@@ -10,9 +10,19 @@
     grid-area: gallery;
 } */
 
-/* .entry-title.product-title {
+.product_title.entry-title {
     font-size: var(--fontsize-extra-large);
-    position: absolute;
-    grid-area: gallery;
-} */
-
+    /* position: absolute;
+    grid-area: gallery; */
+    max-width: 435px;
+    color: var(--colour-twhite);
+    background-color: var(--colour-tblack);
+    text-align: center;
+    margin-bottom: 0;
+    height: 75px;
+}
+.woocommerce-product-gallery {
+    max-width: 435px;
+    padding: 20px;
+    border: 2px solid var(--colour-tblack);
+}
