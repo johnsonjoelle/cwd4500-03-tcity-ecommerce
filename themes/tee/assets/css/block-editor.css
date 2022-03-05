@@ -126,18 +126,20 @@ figcaption {
 }
 
 /* Content Widths */
-.entry-content, .entry-header {
+.entry-content > *:not(.woocommerce), .entry-header {
     max-width: 990px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 25px;
 }
-.entry-content > .alignwide,
-.entry-content > .woocommerce,
+.entry-content > *.alignwide,
+.entry-content > *.woocommerce,
 .alignwide {
     max-width: 1190px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.entry-content > .alignfull,
+.entry-content > *.alignfull,
 .alignfull {
     width: 100%;
 }
