@@ -154,6 +154,12 @@ function tee_scripts() {
 		array(),
 		TEE_VERSION
 	);
+
+	wp_enqueue_style(
+		'woocommerce-style',
+		get_template_directory_uri() . '/assets/css/woocommerce.css',
+	);
+
 	wp_enqueue_style(
 		'tee-responsive-style',
 		get_template_directory_uri() . '/assets/css/responsive.css',
@@ -202,3 +208,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Block editor additions.
  */
 require get_template_directory() . '/inc/block-editor.php';
+
+/**
+ * Woocommerce additions.
+ */
+require get_template_directory() . '/inc/woocommerce.php';

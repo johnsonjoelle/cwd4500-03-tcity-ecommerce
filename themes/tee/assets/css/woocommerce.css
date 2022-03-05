@@ -1,0 +1,18 @@
+/* Product Info Layout */
+/* .single-product .product {
+    display: grid;
+    grid-template-areas: "gallery colours design";
+    grid-template-columns: 370px 82px 1fr;
+    grid-template-rows: max-content;
+} */
+
+/* div.images.woocommerce-product-gallery {
+    grid-area: gallery;
+} */
+
+/* .entry-title.product-title {
+    font-size: var(--fontsize-extra-large);
+    position: absolute;
+    grid-area: gallery;
+} */
+
