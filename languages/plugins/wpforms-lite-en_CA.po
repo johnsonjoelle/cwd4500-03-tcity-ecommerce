@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Contact Form by WPForms &#8211; Drag &amp; Drop Form Builder for WordPress - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-12 22:22:06+0000\n"
+"PO-Revision-Date: 2022-03-02 02:14:42+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -89,6 +89,11 @@ msgstr "%s Field"
 msgid "Are you sure you want to delete this form and all its information?"
 msgstr "Are you sure you want to delete this form and all its information?"
 
+#. translators: %s - entry count.
+#: includes/admin/admin.php:144
+msgid "Are you sure you want to delete %s entry(s) and all the information (files, notes, logs, etc.)?"
+msgstr "Are you sure you want to delete %s entry(s) and all the information (files, notes, logs, etc.)?"
+
 #: includes/admin/admin.php:142
 msgid "Are you sure you want to delete ALL entries and all their information (files, notes, logs, etc.)?"
 msgstr "Are you sure you want to delete ALL entries and all their information (files, notes, logs, etc.)?"
@@ -96,6 +101,14 @@ msgstr "Are you sure you want to delete ALL entries and all their information (f
 #: includes/admin/admin.php:141
 msgid "Are you sure you want to delete this entry and all its information (files, notes, logs, etc.)?"
 msgstr "Are you sure you want to delete this entry and all its information (files, notes, logs, etc.)?"
+
+#: includes/admin/ajax-actions.php:534
+msgid "Could not install the plugin. Please download and install it manually."
+msgstr "Could not install the plugin. Please download and install it manually."
+
+#: includes/admin/class-about.php:1146
+msgid "Address, Phone, Website / URL, Date / Time, Password, File Upload, HTML, Pagebreaks, Entry Preview, Section Dividers, Ratings, Rich Text, and Hidden Field"
+msgstr "Address, Phone, Website / URL, Date / Time, Password, File Upload, HTML, Pagebreaks, Entry Preview, Section Dividers, Ratings, Rich Text, and Hidden Field"
 
 #: includes/admin/class-about.php:1030
 msgid "Boost your sales and conversions by up to 15% with real-time social proof notifications. TrustPulse helps you show live user activity and purchases to help convince other users to purchase."
@@ -212,6 +225,10 @@ msgstr "Check this option to hide plugin announcements and update details."
 #: templates/emails/summary-body.php:31
 msgid "Below is the total number of submissions for each form, <strong>however actual entries are not stored by WPForms Lite</strong>."
 msgstr "Below is the total number of submissions for each form, <strong>however actual entries are not stored by WPForms Lite</strong>."
+
+#: templates/education/admin/settings/geolocation/heading.php:24
+msgid "Do you want to learn more about visitors who fill out your online forms? Our geolocation addon allows you to collect and store your website visitors geolocation data along with their form submission. This insight can help you to be better informed and turn more leads into customers. Furthermore, add a smart address field that autocompletes using the Google Places API."
+msgstr "Do you want to learn more about visitors who fill out your online forms? Our geolocation addon allows you to collect and store your website visitors geolocation data along with their form submission. This insight can help you to be better informed and turn more leads into customers. Furthermore, add a smart address field that autocompletes using the Google Places API."
 
 #: templates/education/admin/settings/geolocation/screenshots.php:27
 msgid "Smart Address Field"
@@ -450,6 +467,15 @@ msgstr "Disabling entry storage for this form will completely prevent any new su
 #: includes/admin/builder/panels/class-settings.php:202
 msgid "Enable hCaptcha"
 msgstr "Enable hCaptcha"
+
+#: includes/admin/class-about.php:1421
+msgid "Form Abandonment, Conversational Forms, Frontend Post Submission, User Registration, Geolocation, and more (23 total)"
+msgstr "Form Abandonment, Conversational Forms, Frontend Post Submission, User Registration, Geolocation, and more (23 total)"
+
+#: includes/admin/class-about.php:1428 includes/admin/class-about.php:1435
+#: includes/admin/class-about.php:1442
+msgid "Form Abandonment, Conversational Forms, Frontend Post Submission, User Registration, Geolocation, Webhooks, and more (27 total)"
+msgstr "Form Abandonment, Conversational Forms, Frontend Post Submission, User Registration, Geolocation, Webhooks, and more (27 total)"
 
 #: includes/admin/admin.php:169
 msgid "Could not disconnect this account."
@@ -977,6 +1003,11 @@ msgstr "File Uploads"
 msgid "Advanced Fields"
 msgstr "Advanced Fields"
 
+#: includes/admin/class-about.php:1325 includes/admin/class-about.php:1332
+#: includes/admin/class-about.php:1339
+msgid "Accept payments using Stripe, Square, PayPal, and Authorize.Net"
+msgstr "Accept payments using Stripe, Square, PayPal, and Authorize.Net"
+
 #: includes/fields/class-base.php:2205
 msgid "Only values matching specific conditions can be added."
 msgstr "Only values matching specific conditions can be added."
@@ -1028,6 +1059,11 @@ msgstr "Check this option to enable sending emails asynchronously, which can mak
 #: includes/admin/class-settings.php:334
 msgid "Optimize Email Sending"
 msgstr "Optimize Email Sending"
+
+#. translators: %s - marketing integration name.
+#: includes/admin/builder/class-builder.php:567
+msgid "In order to complete your form's %s integration, please check that the dropdowns for all required (*) List Fields have been filled out."
+msgstr "In order to complete your form's %s integration, please check that the dropdowns for all required (*) List Fields have been filled out."
 
 #: includes/admin/builder/class-builder.php:478
 msgid "Are you sure you want to leave? You have unsaved changes"
@@ -1518,6 +1554,11 @@ msgstr "Activating..."
 #: src/Admin/Pages/Analytics.php:165 src/Admin/Pages/SMTP.php:162
 msgid "Installing..."
 msgstr "Installing..."
+
+#. translators: %s - Lite plugin download URL.
+#: src/Admin/Pages/Analytics.php:154 src/Admin/Pages/SMTP.php:151
+msgid "Could not activate the plugin. Please activate it on the <a href=\"%s\">Plugins page</a>."
+msgstr "Could not activate the plugin. Please activate it on the <a href=\"%s\">Plugins page</a>."
 
 #: src/Admin/FlyoutMenu.php:63
 msgid "See Quick Links"
@@ -2558,6 +2599,10 @@ msgstr "Custom Captcha Addon included"
 msgid "No Addons Included"
 msgstr "No Addons Included"
 
+#: includes/admin/class-about.php:1394
+msgid "Multi-page Forms, File Upload Forms, Multiple Form Notifications, Conditional Form Confirmation, Custom CAPTCHA, Offline Forms, Signature Forms, Save and Resume Form"
+msgstr "Multi-page Forms, File Upload Forms, Multiple Form Notifications, Conditional Form Confirmation, Custom CAPTCHA, Offline Forms, Signature Forms, Save and Resume Form"
+
 #: includes/admin/class-about.php:1393
 msgid "All Advanced Features"
 msgstr "All Advanced Features"
@@ -2628,6 +2673,10 @@ msgstr "Powerful Form Logic for Building Smart Forms"
 #: includes/admin/class-about.php:1168
 msgid "Not available"
 msgstr "Not available"
+
+#: includes/admin/class-about.php:1153
+msgid "Address, Phone, Website URL, Date/Time, Password, File Upload, HTML, Pagebreaks, Entry Preview, Section Dividers, Ratings, Rich Text, and Hidden Field"
+msgstr "Address, Phone, Website URL, Date/Time, Password, File Upload, HTML, Pagebreaks, Entry Preview, Section Dividers, Ratings, Rich Text, and Hidden Field"
 
 #: includes/admin/class-about.php:1145 includes/admin/class-about.php:1152
 #: includes/admin/class-about.php:1159
@@ -2712,6 +2761,11 @@ msgstr "Bonus: WPForms Lite users get <span class=\"price-20-off\">50% off regul
 msgid "Get WPForms Pro Today and Unlock all the Powerful Features"
 msgstr "Get WPForms Pro Today and Unlock all the Powerful Features"
 
+#. translators: %s - stars.
+#: includes/admin/class-about.php:531
+msgid "We know that you will truly love WPForms. It has over <strong>10,000+ five star ratings</strong> (%s) and is active on over 5 million websites."
+msgstr "We know that you will truly love WPForms. It has over <strong>10,000+ five star ratings</strong> (%s) and is active on over 5 million websites."
+
 #: includes/admin/class-about.php:518
 msgid "Thanks for being a loyal WPForms Lite user. <strong>Upgrade to WPForms Pro</strong> to unlock all the awesome features and experience<br>why WPForms is consistently rated the best WordPress form builder."
 msgstr "Thanks for being a loyal WPForms Lite user. <strong>Upgrade to WPForms Pro</strong> to unlock all the awesome features and experience<br>why WPForms is consistently rated the best WordPress form builder."
@@ -2760,6 +2814,12 @@ msgstr "The WPForms Team photo"
 #: includes/admin/class-about.php:284
 msgid "Yup, we know a thing or two about building awesome products that customers love."
 msgstr "Yup, we know a thing or two about building awesome products that customers love."
+
+#. translators: %1$s - WPBeginner URL; %2$s - OptinMonster URL; %3$s -
+#. MonsterInsights URL.
+#: includes/admin/class-about.php:268
+msgid "WPForms is brought to you by the same team that’s behind the largest WordPress resource site, <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">WPBeginner</a>, the most popular lead-generation software, <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">OptinMonster</a>, the best WordPress analytics plugin, <a href=\"%3$s\" target=\"_blank\" rel=\"noopener noreferrer\">MonsterInsights</a>, and more!"
+msgstr "WPForms is brought to you by the same team that’s behind the largest WordPress resource site, <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">WPBeginner</a>, the most popular lead-generation software, <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">OptinMonster</a>, the best WordPress analytics plugin, <a href=\"%3$s\" target=\"_blank\" rel=\"noopener noreferrer\">MonsterInsights</a>, and more!"
 
 #: includes/admin/class-about.php:261
 msgid "Our goal is to take the pain out of creating online forms and make it easy."
@@ -2813,6 +2873,14 @@ msgstr "Addon installed & activated."
 #: src/Lite/Admin/Connect.php:195 src/Lite/Admin/Connect.php:255
 msgid "Plugin installed & activated."
 msgstr "Plugin installed & activated."
+
+#: includes/admin/admin.php:135 includes/admin/ajax-actions.php:535
+msgid "Could not install the addon. Please download it from wpforms.com and install it manually."
+msgstr "Could not install the addon. Please download it from wpforms.com and install it manually."
+
+#: includes/admin/ajax-actions.php:510
+msgid "Could not activate the addon. Please activate it on the Plugins page."
+msgstr "Could not activate the addon. Please activate it on the Plugins page."
 
 #: includes/admin/ajax-actions.php:501
 msgid "Addon activated."
@@ -3331,6 +3399,13 @@ msgstr "Are you sure you want to disable conditional logic? This will remove the
 #: includes/admin/builder/class-builder.php:497
 msgid "Due to form changes, conditional logic rules will be removed or updated:"
 msgstr "Due to form changes, conditional logic rules will be removed or updated:"
+
+#. translators: %1$s - data source name (e.g. Categories, Posts), %2$s - data
+#. source type (e.g. post type, taxonomy), %3$s - display limit, %4$s - total
+#. number of items.
+#: includes/admin/builder/class-builder.php:488
+msgid "The %1$s %2$s contains over %3$s items (%4$s). This may make the field difficult for your visitors to use and/or cause the form to be slow."
+msgstr "The %1$s %2$s contains over %3$s items (%4$s). This may make the field difficult for your visitors to use and/or cause the form to be slow."
 
 #: includes/admin/builder/class-builder.php:483
 msgid "Hide presets"
@@ -3992,6 +4067,10 @@ msgstr "Signatures"
 #: includes/admin/class-welcome.php:248
 msgid "See All Features"
 msgstr "See All Features"
+
+#: includes/admin/class-welcome.php:240
+msgid "Our smart captcha and spam protection automatically prevents spam submissions."
+msgstr "Our smart captcha and spam protection automatically prevents spam submissions."
 
 #: includes/admin/class-welcome.php:239
 msgid "Spam Protection"
@@ -5669,6 +5748,12 @@ msgstr "No form ID found"
 msgid "You do not have permission."
 msgstr "You do not have permission."
 
+#. translators: %s - total amount of choices.
+#: includes/admin/builder/panels/class-fields.php:551
+#: includes/fields/class-base.php:1901
+msgid "Showing the first 20 choices.<br> All %s choices will be displayed when viewing the form."
+msgstr "Showing the first 20 choices.<br> All %s choices will be displayed when viewing the form."
+
 #: includes/admin/ajax-actions.php:368 includes/emails/class-emails.php:571
 #: includes/emails/class-emails.php:616 includes/fields/class-base.php:1736
 #: src/SmartTags/SmartTag/FieldHtmlId.php:38
@@ -5724,6 +5809,14 @@ msgstr "One Column"
 #: includes/fields/class-base.php:1448
 msgid "Select the layout for displaying field choices."
 msgstr "Select the layout for displaying field choices."
+
+#: includes/fields/class-base.php:1426
+msgid "Hide Sublabels"
+msgstr "Hide Sublabels"
+
+#: includes/fields/class-base.php:1417
+msgid "Check this option to hide the form field sublabel."
+msgstr "Check this option to hide the form field sublabel."
 
 #: includes/fields/class-base.php:1395
 msgid "Hide Label"
@@ -5975,6 +6068,10 @@ msgstr "Your site is running an <strong>insecure version</strong> of PHP that is
 msgid "Upgrade Now"
 msgstr "Upgrade Now"
 
+#: src/Lite/Admin/Pages/Addons.php:98
+msgid "WPForms Addons are a PRO feature"
+msgstr "WPForms Addons are a PRO feature"
+
 #: lite/templates/admin/addons.php:19
 msgid "Search Addons"
 msgstr "Search Addons"
@@ -6040,9 +6137,22 @@ msgstr "<strong>Bonus:</strong> WPForms Lite users get <span class=\"green\">50%
 msgid "Get WPForms Pro Today and Unlock all the Powerful Features »"
 msgstr "Get WPForms Pro Today and Unlock all the Powerful Features »"
 
+#: includes/admin/class-about.php:568 lite/wpforms-lite.php:529
+msgid "Accept user-submitted content with the Post Submissions addon"
+msgstr "Accept user-submitted content with the Post Submissions addon"
+
+#: includes/admin/class-about.php:592 lite/wpforms-lite.php:536
+msgid "Create user registration and login forms"
+msgstr "Create user registration and login forms"
+
 #: lite/wpforms-lite.php:522
 msgid "Pro Features:"
 msgstr "Pro Features:"
+
+#. translators: %s - star icons.
+#: lite/wpforms-lite.php:510
+msgid "We know that you will truly love WPForms. It has over 10,000+ five star ratings (%s) and is active on over 5 million websites."
+msgstr "We know that you will truly love WPForms. It has over 10,000+ five star ratings (%s) and is active on over 5 million websites."
 
 #: lite/wpforms-lite.php:505
 msgid "Thanks for being a loyal WPForms Lite user. Upgrade to WPForms Pro to unlock all the awesome features and experience why WPForms is consistently rated the best WordPress form builder."

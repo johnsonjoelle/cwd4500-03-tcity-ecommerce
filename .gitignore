@@ -20,6 +20,7 @@ plugins/wpforms-lite
 plugins/woocommerce-services
 plugins/woocommerce-payments
 plugins/woo-gutenberg-products-block
+plugins/woo-variation-swatches
 
 #SRC files
 node_modules
