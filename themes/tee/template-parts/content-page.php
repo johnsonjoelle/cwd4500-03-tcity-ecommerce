@@ -37,7 +37,7 @@
 		<?php
 		the_content();
 
-		if ( is_shop() ) : ?>
+		if ( ! is_shop() ) : ?>
 			<h1 class="entry-title">Browse Designs</h1>
 			<!-- dislay woocommerce archive for design -->
 		<?php endif;

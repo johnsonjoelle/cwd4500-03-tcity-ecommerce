@@ -215,7 +215,7 @@ input {
 .tee-account-main tbody tr:nth-child(2n) {
     background-color: inherit;
 }
-h3.account-sidebar {
+.account-sidebar h3 {
     font-size: 24px;
 }
 .account-sidebar a {
