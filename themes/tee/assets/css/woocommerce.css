@@ -205,3 +205,22 @@ input {
 .woocommerce-MyAccount-navigation a:hover {
     color: var(--colour-tblue);
 }
+.tee-account-main {
+    padding: 0 25px;
+    margin-bottom: 50px;
+}
+.tee-account-main table, .tee-account-main tbody {
+    border-width: 0;
+}
+.tee-account-main tbody tr:nth-child(2n) {
+    background-color: inherit;
+}
+h3.account-sidebar {
+    font-size: 24px;
+}
+.account-sidebar a {
+    font-size: var(--fontsize-small);
+}
+.tee-order-link {
+    text-align: right;
+}

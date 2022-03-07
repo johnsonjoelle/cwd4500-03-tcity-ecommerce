@@ -173,10 +173,11 @@ ul, ol {
 .wp-block-button, a.button, button.button {
     height: 46px;
     background-color: var(--colour-tblack);
+    color: var(--colour-twhite);
     border-radius: 3px;
     font-size: var(--fontsize-below-medium);
     transition: background-color 0.4s;
-    align-items: center;
+    /* align-items: center; */
     padding-top: 0;
     padding-bottom: 0;
 }
