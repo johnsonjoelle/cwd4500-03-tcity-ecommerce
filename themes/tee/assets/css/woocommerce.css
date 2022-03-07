@@ -200,4 +200,8 @@ input {
 }
 .woocommerce-MyAccount-navigation a {
     color: var(--colour-tblack);
+    transition: color 0.4s;
+}
+.woocommerce-MyAccount-navigation a:hover {
+    color: var(--colour-tblue);
 }
