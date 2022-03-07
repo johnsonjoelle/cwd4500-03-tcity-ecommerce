@@ -148,6 +148,14 @@ function tee_scripts() {
 		array(),
 		'6.7.4'
 	);
+
+	wp_enqueue_script(
+		'foundation-script',
+		get_template_directory_uri() . '/assets/js/vendor/foundation.min.js',
+		array( 'jquery', 'what-input-script' ),
+		'6.7.4',
+		true
+	);
 	
 	wp_enqueue_style(
 		'tee-style',
@@ -173,14 +181,6 @@ function tee_scripts() {
 		get_template_directory_uri() . '/assets/js/vendor/what-input.js',
 		array( 'jquery' ),
 		'5.2.10',
-		true
-	);
-
-	wp_enqueue_script(
-		'foundation-script',
-		get_template_directory_uri() . '/assets/js/vendor/foundation.min.js',
-		array( 'jquery', 'what-input-script' ),
-		'6.7.4',
 		true
 	);
 

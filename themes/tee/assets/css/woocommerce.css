@@ -20,7 +20,7 @@
 /* Container */
 .entry-content > .woocommerce {
     /* width: 1190px; */
-    padding-top: 40px;
+    padding: 40px 25px 0;
 }
 
 /* Store Page */
@@ -173,4 +173,31 @@ ul.products {
 /* Product Tabs */
 .product .woocommerce-tabs {
     display: none;
+}
+
+/* Login Page */
+.woocommerce-form-login {
+    max-width: 600px;
+}
+input {
+    background: var(--white-color) !important; /* Fix Firefox autofill colour for input fields */
+}
+
+/* My Account Page */
+.woocommerce-MyAccount-navigation ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: var(--fontsize-above-avg);
+    list-style: none;
+    border: 1px solid #00000016;
+    box-shadow: 0 3px 6px #00000016;
+    margin-left: 0;
+    height: 40px;
+    margin-bottom: 50px;
+}
+.woocommerce-MyAccount-navigation a {
+    color: var(--colour-tblack);
 }

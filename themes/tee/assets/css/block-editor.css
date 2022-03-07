@@ -170,19 +170,24 @@ ul, ol {
 }
 
 /* Button Blocks */
-.wp-block-button {
+.wp-block-button, a.button, button.button {
     height: 46px;
     background-color: var(--colour-tblack);
     border-radius: 3px;
     font-size: var(--fontsize-below-medium);
     transition: background-color 0.4s;
     align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 .wp-block-button__link {
     padding: 0 1em;
     transition: background-color 0.4s;
 }
-.wp-block-button:hover, .wp-block-button:hover > * {
+.wp-block-button:hover,
+.wp-block-button:hover > *,
+a.button:hover,
+button.button:hover {
     background-color: var(--colour-tblue);
 }
 
