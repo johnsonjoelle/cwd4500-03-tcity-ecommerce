@@ -10,6 +10,18 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if ( is_woocommerce() || is_cart() || is_checkout() ) : ?>
+		<nav id="tee_woocommerce_nav">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-store',
+					'menu_id'        => 'store-menu',
+				)
+			);
+			?>
+		</nav>
+	<?php endif; ?>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->

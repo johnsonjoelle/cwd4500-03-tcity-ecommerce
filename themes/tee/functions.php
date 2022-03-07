@@ -50,6 +50,7 @@ function tee_setup() {
 	register_nav_menus(
 		array(
 			'menu-primary' => esc_html__( 'Primary', 'tee' ),
+			'menu-store' => esc_html__('Store', 'tee')
 		)
 	);
 

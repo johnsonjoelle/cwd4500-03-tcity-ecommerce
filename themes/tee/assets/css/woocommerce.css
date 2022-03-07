@@ -1,3 +1,22 @@
+/* Navigation */
+#store-menu {
+    box-shadow: 0 3px 6px #00000016;
+    background-color: var(--colour-twhite);
+    height: 55px;
+    padding: 0 30px;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: var(--fontsize-above-avg);
+    font-weight: 700;
+}
+#store-menu .menu-item a {
+    color: var(--colour-tblack);
+    transition: color 0.4s;
+}
+#store-menu .menu-item a:hover, #store-menu .menu-item a:focus {
+    color: var(--colour-tblue);
+}
+
 .entry-content > .woocommerce {
     /* width: 1190px; */
     padding-top: 40px;
