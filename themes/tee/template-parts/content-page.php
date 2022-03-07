@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( is_woocommerce() || is_cart() || is_checkout() ) : ?>
+	<?php if ( is_woocommerce() || is_cart() || is_checkout() || is_account_page() ) : ?>
 		<nav id="tee_woocommerce_nav">
 			<?php
 			wp_nav_menu(
@@ -22,7 +22,7 @@
 			?>
 		</nav>
 	<?php endif; ?>
-	<header class="entry-header <?php if( is_woocommerce() || is_cart() || is_checkout() ) { ?> alignwide <?php } ?> ">
+	<header class="entry-header <?php if( is_woocommerce() || is_cart() || is_checkout() || is_account_page() ) { ?> alignwide <?php } ?> ">
 		<?php 
 		if ( ! is_shop() ) : 
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -37,7 +37,7 @@
 		<?php
 		the_content();
 
-		if ( ! is_shop() ) : ?>
+		if ( is_shop() ) : ?>
 			<h1 class="entry-title">Browse Designs</h1>
 			<!-- dislay woocommerce archive for design -->
 		<?php endif;
