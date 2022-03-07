@@ -22,8 +22,13 @@
 			?>
 		</nav>
 	<?php endif; ?>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<header class="entry-header <?php if( is_woocommerce() || is_cart() || is_checkout() ) { ?> alignwide <?php } ?> ">
+		<?php 
+		if ( ! is_shop() ) : 
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		else : ?>
+			<h1 class="entry-title">Choose a T. Style</h1>
+		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<?php tee_post_thumbnail(); ?>
@@ -31,6 +36,11 @@
 	<div class="entry-content">
 		<?php
 		the_content();
+
+		if ( ! is_shop() ) : ?>
+			<h1 class="entry-title">Browse Designs</h1>
+			<!-- dislay woocommerce archive for design -->
+		<?php endif;
 
 		wp_link_pages(
 			array(

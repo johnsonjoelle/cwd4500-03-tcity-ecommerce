@@ -17,10 +17,39 @@
     color: var(--colour-tblue);
 }
 
+/* Container */
 .entry-content > .woocommerce {
     /* width: 1190px; */
     padding-top: 40px;
 }
+
+/* Store Page */
+.woocommerce-result-count,
+.woocommerce-ordering {
+    display: none;
+}
+ul.products {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, 174px);
+    column-gap: 20px;
+}
+.woocommerce-LoopProduct-link,
+.woocommerce-LoopProduct-link .price {
+    text-align: center;
+}
+.woocommerce-loop-product__title {
+    font-size: var(--fontsize-below-medium);
+    color: var(--colour-tblack);
+}
+.woocommerce-LoopProduct-link .price {
+    display: block;
+    color: var(--colour-tblue);
+}
+.products .product .button {
+    display: none;
+}
+
 /* Product Info Layout */
 .woocommerce div.product {
     display: grid;
