@@ -224,3 +224,27 @@ input {
 .tee-order-link {
     text-align: right;
 }
+
+/* Cart Page */
+.cart_item {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 120px;
+}
+.tee-cart-item-wrapper {
+    box-shadow: 0 3px 6px #00000016;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60px 60px 1fr 60px 60px;
+}
+.tee-product-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.tee-product-info .variation {
+    display: flex;
+}
+.tee-product-info .variation-Chooseadesign {
+    display: none;
+}
