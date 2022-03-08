@@ -100,6 +100,12 @@ body {
 #icon-menu {
     display: none;
 }
+.post .entry-header {
+    margin-bottom: 40px;
+}
+.post .entry-content {
+    margin-top: 60px;
+}
 
 /* Page Templates */
 /* Bar Left Templates */
@@ -126,7 +132,7 @@ figcaption {
 }
 
 /* Content Widths */
-.entry-content > *:not(.woocommerce), .entry-header {
+.entry-content > *:not(.woocommerce), .entry-header, .entry-footer {
     max-width: 990px;
     margin-left: auto;
     margin-right: auto;
@@ -461,6 +467,16 @@ blockquote {
 .site-info {
     margin: 8px 0;
     padding-left: 20px;
+}
+.entry-footer span {
+    display: block;
+}
+.post-navigation, .comments-area {
+    max-width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 0 25px;
 }
 
 /* Plugin Overrides */
