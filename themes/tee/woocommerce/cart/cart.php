@@ -46,7 +46,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 							}
 							?>
 						</div>
-						<div class="tee-design-thumbnail"></div>
 						<div class="tee-product-info">
 							<p class="product-name" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
 								<?php
@@ -55,48 +54,23 @@ do_action( 'woocommerce_before_cart' ); ?>
 								} else {
 									echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key ) );
 								}
-								?> <!-- design name --> <?php
+								?> 
+							</p> <?php
 
-								do_action( 'woocommerce_after_cart_item_name', $cart_item, $cart_item_key );
+							do_action( 'woocommerce_after_cart_item_name', $cart_item, $cart_item_key );
 
-								// Meta data.
-								echo wc_get_formatted_cart_item_data( $cart_item ); // PHPCS: XSS ok.
-								?>
+							// Meta data.
+							echo wc_get_formatted_cart_item_data( $cart_item ); // PHPCS: XSS ok.
+							?>
 
-								<?php
-								// Backorder notification.
-								if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
-									echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>', $product_id ) );
-								}
-								?>
-							</p>
+							<?php
+							// Backorder notification.
+							if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
+								echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>', $product_id ) );
+							}
+							?>
 						</div> <!-- end of .tee-product-info -->
-						<div class="product-remove">
-							<?php
-								echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-									'woocommerce_cart_item_remove_link',
-									sprintf(
-										'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">
-											<object class="remove-icon" data="../wp-content/themes/tee/assets/img/icons/cart-close.svg" type="image/svg+xml"></object>
-										</a>',
-										esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
-										esc_html__( 'Remove this item', 'woocommerce' ),
-										esc_attr( $product_id ),
-										esc_attr( $_product->get_sku() )
-									),
-									$cart_item_key
-								);
-							?>
-						</div>
-					</div> <!-- end of .tee-cart-item-wrapper -->
-
-						<td class="product-price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
-							<?php
-								echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
-							?>
-						</td>
-
-						<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'woocommerce' ); ?>">
+						<div class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'woocommerce' ); ?>">
 						<?php
 						if ( $_product->is_sold_individually() ) {
 							$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
@@ -116,35 +90,52 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // PHPCS: XSS ok.
 						?>
-						</td>
-
-						<td class="product-subtotal" data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>">
+						</div>
+						<div class="product-remove">
 							<?php
-								echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
+								echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+									'woocommerce_cart_item_remove_link',
+									sprintf(
+										'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">
+											<object class="remove-icon" data="../wp-content/themes/tee/assets/img/icons/cart-close.svg" type="image/svg+xml"></object>
+										</a>',
+										esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
+										esc_html__( 'Remove this item', 'woocommerce' ),
+										esc_attr( $product_id ),
+										esc_attr( $_product->get_sku() )
+									),
+									$cart_item_key
+								);
 							?>
-						</td>
+						</div>
+					</div> <!-- end of .tee-cart-item-wrapper -->
+
+					<div class="product-price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
+						<?php
+							echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
+						?>
 					</div>
-					<?php
-				}
+				</div>
+				<?php
 			}
-			?>
+		}
+		?>
 	</section>
-	<section class="cell large-3 medium-3 small-12"></section>
+	<section class="cell large-3 medium-3 small-12">
+		<div class="cart-collaterals">
+			<?php
+				/**
+				 * Cart collaterals hook.
+				 *
+				 * @hooked woocommerce_cross_sell_display
+				 * @hooked woocommerce_cart_totals - 10
+				 */
+				do_action( 'woocommerce_cart_collaterals' );
+			?>
+		</div>
+	</section>
 	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
-		<thead>
-			<tr>
-				<th class="product-remove">&nbsp;</th>
-				<th class="product-thumbnail">&nbsp;</th>
-				<th class="product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
-				<th class="product-price"><?php esc_html_e( 'Price', 'woocommerce' ); ?></th>
-				<th class="product-quantity"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></th>
-				<th class="product-subtotal"><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></th>
-			</tr>
-		</thead>
 		<tbody>
-
-			
-
 			<?php do_action( 'woocommerce_cart_contents' ); ?>
 
 			<tr>
@@ -172,17 +163,5 @@ do_action( 'woocommerce_before_cart' ); ?>
 </form>
 
 <?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
-
-<div class="cart-collaterals">
-	<?php
-		/**
-		 * Cart collaterals hook.
-		 *
-		 * @hooked woocommerce_cross_sell_display
-		 * @hooked woocommerce_cart_totals - 10
-		 */
-		do_action( 'woocommerce_cart_collaterals' );
-	?>
-</div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
