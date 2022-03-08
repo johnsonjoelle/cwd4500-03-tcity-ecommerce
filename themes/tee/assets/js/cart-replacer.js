@@ -1,7 +1,4 @@
-// console.log("cart replacer being read");
-
 let variations = document.querySelectorAll('dt');
-// console.log(variations);
 
 for (let variation of variations) {
     let text = variation.innerText;

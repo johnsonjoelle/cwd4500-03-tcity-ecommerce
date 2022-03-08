@@ -151,7 +151,6 @@ ul.products {
 .single_variation_wrap {
     grid-area: dl;
 }
-
 .variations p.label {
     background-color: transparent;
     color: var(--colour-tblack);
@@ -164,6 +163,9 @@ ul.products {
 }
 .size select {
     font-size: var(--fontsize-small);
+}
+.file_div_clean.wfu_container {
+    margin-bottom: 20px;
 }
 
 /* Product Tabs */
