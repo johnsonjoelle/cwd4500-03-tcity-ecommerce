@@ -194,6 +194,16 @@ function tee_scripts() {
 		);
 	}
 
+	if ( is_page( 'checkout' ) ) {
+		wp_enqueue_script(
+			'tee-checkout-script',
+			get_template_directory_uri() . '/assets/js/checkout.js',
+			array(),
+			null,
+			true
+		);
+	}
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

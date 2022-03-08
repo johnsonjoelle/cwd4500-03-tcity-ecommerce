@@ -307,3 +307,8 @@ input {
     padding-top: 10px;
     padding-bottom: 0;
 }
+
+/* Checkout Page */
+.tee-hidden {
+    display: none;
+}
