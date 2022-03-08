@@ -10,6 +10,8 @@ for (let variation of variations) {
         newText = "Colour:";
     } else if (text=="Choose a colour for your design::") {
         newText = "Design Colour:";
+    } else if (text=="Choose a design:") {
+        newText = "Design:";
     } else {
         newText = text.replace("::", ":");
     }

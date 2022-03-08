@@ -23,3 +23,6 @@ function tee_template_submit_file() {
     echo '<p>this is where the file submit btn goes</p>';
 }
 add_action( 'woocommerce_single_variation', 'tee_template_submit_file', 4 );
+// Move Payment Info on Checkout page
+remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
+add_action( 'woocommerce_review_order_after_order_total', 'woocommerce_checkout_payment', 10 );

@@ -48,7 +48,7 @@ if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) {
 
 ?>
 
-<form name="checkout" method="post" class="checkout woocommerce-checkout grid-x" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
+<form name="checkout" method="post" class="checkout woocommerce-checkout grid-x grid-padding-x" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
 	<section class="cell large-8 medium-9 small-12 grid-x">
 	<?php if ( $checkout->get_checkout_fields() ) : ?>
@@ -94,21 +94,85 @@ if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) {
 			</article>
 		</section>
 
-		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
+		<section class="cell small-12">
+			<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
+			<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
+		</section>
+
+		<section class="cell small-12 wp-block-group is-style-sandwich-group tee-order-review-wrapper">
+			<h3 id="order_review_heading"><?php esc_html_e( 'My Order', 'woocommerce' ); ?></h3>
+			
+			<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+
+			<div id="order_review" class="woocommerce-checkout-review-order">
+				<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+			</div>
+		</section>
 
 	<?php endif; ?>
 	</section>
 	
 	<section class="cell large-4 medium-3 small-12">
-		<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
-		
-		<h3 id="order_review_heading"><?php esc_html_e( 'My Order', 'woocommerce' ); ?></h3>
-		
-		<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+		<div class="tee-totals-wrapper">
+			<div class="cart-subtotal">
+				<th><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></th>
+				<td><?php wc_cart_totals_subtotal_html(); ?></td>
+			</div>
+			
+			<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
+				<div class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
+					<th><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
+					<td><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
+				</div>
+			<?php endforeach; ?>
 
-		<div id="order_review" class="woocommerce-checkout-review-order">
-			<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+			<?php if ( WC()->cart->needs_shipping() && WC()->cart->show_shipping() ) : ?>
+
+				<?php do_action( 'woocommerce_review_order_before_shipping' ); ?>
+
+				<?php wc_cart_totals_shipping_html(); ?>
+
+				<?php do_action( 'woocommerce_review_order_after_shipping' ); ?>
+
+			<?php endif; ?>
+
+			<?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
+				<div class="fee">
+					<th><?php echo esc_html( $fee->name ); ?></th>
+					<td><?php wc_cart_totals_fee_html( $fee ); ?></td>
+				</div>
+			<?php endforeach; ?>
+
+			<?php if ( wc_tax_enabled() && ! WC()->cart->display_prices_including_tax() ) : ?>
+				<?php if ( 'itemized' === get_option( 'woocommerce_tax_total_display' ) ) : ?>
+					<?php foreach ( WC()->cart->get_tax_totals() as $code => $tax ) : // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited ?>
+						<div class="tax-rate tax-rate-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
+							<th><?php echo esc_html( $tax->label ); ?></th>
+							<td><?php echo wp_kses_post( $tax->formatted_amount ); ?></td>
+						</div>
+					<?php endforeach; ?>
+				<?php else : ?>
+					<div class="tax-total">
+						<th><?php echo esc_html( WC()->countries->tax_or_vat() ); ?></th>
+						<td><?php wc_cart_totals_taxes_total_html(); ?></td>
+					</div>
+				<?php endif; ?>
+			<?php endif; ?>
+
+			<?php do_action( 'woocommerce_review_order_before_order_total' ); ?>
+
+			<div class="order-total">
+				<th><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
+				<td><?php wc_cart_totals_order_total_html(); ?></td>
+			</div>
 		</div>
+
+		<div class="tee-payment-wrapper">
+		<?php 
+		do_action( 'woocommerce_review_order_after_order_total' ); 
+		?>
+		</div>
+
 	</section>
 
 	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>

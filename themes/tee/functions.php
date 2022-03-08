@@ -184,7 +184,7 @@ function tee_scripts() {
 		true
 	);
 
-	if ( is_page( 'cart' ) ) {
+	if ( is_page( array( 'cart', 'checkout' ) ) ) {
 		wp_enqueue_script(
 			'tee-cart-replace-txt-script',
 			get_template_directory_uri() . '/assets/js/cart-replacer.js',

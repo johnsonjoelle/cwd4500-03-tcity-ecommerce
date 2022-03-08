@@ -312,3 +312,41 @@ input {
 .tee-hidden {
     display: none;
 }
+.tee-product-data .variation {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    font-size: var(--fontsize-extra-small);
+}
+.tee-product-data .variation dt {
+    font-weight: normal;
+    margin-right: 5px;
+}
+.tee-product-data .variation dd {
+    margin-right: 15px;
+}
+.tee-order-review-wrapper {
+    margin-top: 40px;
+}
+.tee-totals-wrapper {
+    box-shadow: 0 3px 6px #00000016;
+    border-left: 8px solid var(--colour-tblue);
+    padding: 10px 15px 15px;
+    margin-bottom: 30px;
+}
+.tee-payment-wrapper {
+    box-shadow: 0 3px 6px #00000016;
+    border-left: 8px solid var(--colour-tred);
+    padding: 10px 15px 15px;
+    margin-bottom: 30px;
+}
+.tee-payment-wrapper .woocommerce-terms-and-conditions-wrapper {
+    display: none;
+}
+.woocommerce-checkout-payment .payment_methods {
+    list-style: none;
+    margin-left: 0;
+}
+.woocommerce-checkout-payment .place-order {
+    text-align: center;
+}
