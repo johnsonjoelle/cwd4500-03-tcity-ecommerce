@@ -24,8 +24,8 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				tee_posted_on();
 				tee_posted_by();
+				tee_posted_on();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>

@@ -106,6 +106,18 @@ body {
 .post .entry-content {
     margin-top: 60px;
 }
+.post .entry-meta {
+    font-size: var(--fontsize-small);
+}
+.post .entry-meta a {
+    color: var(--colour-tblack);
+}
+.post .entry-meta a:hover {
+    color: var(--colour-tblue);
+}
+.post .entry-meta span {
+    margin-right: 20px;
+}
 
 /* Page Templates */
 /* Bar Left Templates */
