@@ -21,6 +21,7 @@ plugins/woocommerce-services
 plugins/woocommerce-payments
 plugins/woo-gutenberg-products-block
 plugins/woo-variation-swatches
+plugins/wp-file-upload
 
 #SRC files
 node_modules

@@ -104,7 +104,7 @@ ul.products {
     grid-template-columns: 40% 1fr;
     grid-template-areas:    "price price"
                             "vars vars"
-                            "desc blank";
+                            "desc desc";
     width: 100%;
 }
 .variations_form {
@@ -124,36 +124,32 @@ ul.products {
 .variations_form {
     display: grid;
     grid-template-columns: 40% 1fr;
-    /* grid-template-areas:    "size recs"
-                            "colour recs"
-                            "d-colours recs"
-                            "blank add-cart"; */
+    grid-template-areas:    "size recs"
+                            "colour dl"
+                            "d-colours add-cart"
+                            "blank add-cart";
     grid-auto-rows: 105px;
     column-gap: 20px;
+    row-gap: 15px;
 }
-.variations.size {
-    /* grid-area: size;
-    height: max-content; */
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
+.variations .label {
+    padding-left: 0;
 }
-.variations.colour {
-    /* grid-area: colour; */
-    grid-row: 2/3;
-    grid-column: 1/2;
+.variations.pa_size {
+    grid-area: size;
+    height: max-content;
 }
-.variations.design-colour {
+.variations.pa_colour {
+    grid-area: colour;
+}
+.variations.pa_design-colour {
     grid-area: d-colours;
-    grid-row: 3/4;
-    grid-column: 1/2;
 }
-.variations.recs {
-    /* grid-area: recs; */
-    grid-row: 1/span 3;
-    grid-column: 2/-1;
+.variations.pa_design {
+    grid-area: recs;
 }
 .single_variation_wrap {
-    grid-area: add-cart;
+    grid-area: dl;
 }
 
 .variations p.label {
