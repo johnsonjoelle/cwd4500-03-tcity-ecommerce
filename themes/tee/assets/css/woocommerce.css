@@ -85,6 +85,7 @@ ul.products {
 /* Product Images */
 .woocommerce-product-gallery {
     max-width: 435px;
+    height: max-content;
     padding: 20px;
     border: 2px solid var(--colour-tblack);
 }
@@ -112,6 +113,7 @@ ul.products {
 }
 .summary .price {
     grid-area: price;
+    color: var(--colour-tblue);
 }
 .woocommerce-product-details__short-description {
     grid-area: desc;
@@ -125,10 +127,14 @@ ul.products {
     display: grid;
     grid-template-columns: 40% 1fr;
     grid-template-areas:    "size recs"
+                            "size recs"
+                            "colour recs"
                             "colour dl"
-                            "d-colours add-cart"
+                            "d-colours dl"
+                            "blank add-cart"
+                            "blank add-cart"
                             "blank add-cart";
-    grid-auto-rows: 105px;
+    grid-auto-rows: 50px;
     column-gap: 20px;
     row-gap: 15px;
 }
@@ -155,7 +161,10 @@ ul.products {
     background-color: transparent;
     color: var(--colour-tblack);
     margin-bottom: 0;
-    font-size: var(--fontsize-normal);
+    font-size: var(--fontsize-above-avg);
+}
+.variations p.label label {
+    font-weight: 600;
 }
 .size .value {
     min-width: 120px;
@@ -166,6 +175,13 @@ ul.products {
 }
 .file_div_clean.wfu_container {
     margin-bottom: 20px;
+}
+.variable-item.image-variable-item:not(.radio-variable-item) {
+	width: 60px;
+	height: 60px;
+}
+.woocommerce-variation-add-to-cart input[type="number"] {
+    width: 65px;
 }
 
 /* Product Tabs */
