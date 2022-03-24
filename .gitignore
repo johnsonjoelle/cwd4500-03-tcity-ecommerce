@@ -23,6 +23,7 @@ plugins/woocommerce-payments
 plugins/woo-gutenberg-products-block
 plugins/woo-variation-swatches
 plugins/wp-file-upload
+plugins/show-current-template
 
 #SRC files
 node_modules

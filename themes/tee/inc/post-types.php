@@ -40,13 +40,12 @@ function tee_post_types() {
         'show_ui'            => true,
         'show_in_menu'       => true,
         'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'design' ),
+        'rewrite'            => array( 'slug' => 'designs' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => 5,
         'supports'           => array( 'title', 'editor', 'author', 'thumbnail' ),
-        'taxonomies'         => array( 'category', 'post_tag' ),
         'show_in_rest'       => true
     );
     
