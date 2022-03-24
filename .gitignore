@@ -17,6 +17,7 @@ upgrade
 
 # Wordpress plugin folders
 plugins/wpforms-lite
+plugins/woocommerce
 plugins/woocommerce-services
 plugins/woocommerce-payments
 plugins/woo-gutenberg-products-block

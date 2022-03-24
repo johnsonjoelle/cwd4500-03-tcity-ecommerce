@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes - Twenty Twenty-Two package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-11 01:59:04+0000\n"
+"PO-Revision-Date: 2022-02-28 02:49:14+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,13 +11,167 @@ msgstr ""
 "Language: en_CA\n"
 "Project-Id-Version: Themes - Twenty Twenty-Two\n"
 
+#. Description of the theme
+msgid "Built on a solidly designed foundation, Twenty Twenty-Two embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its color palette is drawn from nature, and its layout elements sit gently on the page. The true richness of Twenty Twenty-Two lies in its opportunity for customization. The theme is built to take advantage of the Full Site Editing features introduced in WordPress 5.9, which means that colors, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks. Whether you’re building a single-page website, a blog, a business website, or a portfolio, Twenty Twenty-Two will help you create a site that is uniquely yours."
+msgstr "Built on a solidly designed foundation, Twenty Twenty-Two embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its colour palette is drawn from nature, and its layout elements sit gently on the page. The true richness of Twenty Twenty-Two lies in its opportunity for customization. The theme is built to take advantage of the Full Site Editing features introduced in WordPress 5.9, which means that colours, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks. Whether you’re building a single-page website, a blog, a business website, or a portfolio, Twenty Twenty-Two will help you create a site that is uniquely yours."
+
 #. Theme Name of the theme
 msgid "Twenty Twenty-Two"
 msgstr "Twenty Twenty-Two"
 
-#. Description of the theme
-msgid "Built on a solidly designed foundation, Twenty Twenty-Two embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its color palette is drawn from nature, and its layout elements sit gently on the page. The true richness of Twenty Twenty-Two lies in its opportunity for customization. The theme is built to take advantage of the Full Site Editing features introduced in WordPress 5.9, which means that colors, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks. Whether you’re building a single-page website, a blog, a business website, or a portfolio, Twenty Twenty-Two will help you create a site that is uniquely yours."
-msgstr "Built on a solidly designed foundation, Twenty Twenty-Two embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its colour palette is drawn from nature, and its layout elements sit gently on the page. The true richness of Twenty Twenty-Two lies in its opportunity for customization. The theme is built to take advantage of the Full Site Editing features introduced in WordPress 5.9, which means that colours, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks. Whether you’re building a single-page website, a blog, a business website, or a portfolio, Twenty Twenty-Two will help you create a site that is uniquely yours."
+#: inc/patterns/hidden-404.php:14
+msgid "Search"
+msgstr "Search"
+
+#: inc/patterns/hidden-404.php:14
+msgctxt "label"
+msgid "Search"
+msgstr "Search"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr "Footer"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header (Dark, small)"
+msgstr "Header (Dark, small)"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header (Dark, large)"
+msgstr "Header (Dark, large)"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr "Header"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page (No Separators)"
+msgstr "Page (No Separators)"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single Post (No Separators)"
+msgstr "Single Post (No Separators)"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page (Large Header)"
+msgstr "Page (Large Header)"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Blank"
+msgstr "Blank"
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Primary and tertiary"
+msgstr "Primary and tertiary"
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Primary and secondary"
+msgstr "Primary and secondary"
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Primary and background"
+msgstr "Primary and background"
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Foreground and tertiary"
+msgstr "Foreground and tertiary"
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Foreground and secondary"
+msgstr "Foreground and secondary"
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Foreground and background"
+msgstr "Foreground and background"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Diagonal background to tertiary"
+msgstr "Diagonal background to tertiary"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Diagonal tertiary to background"
+msgstr "Diagonal tertiary to background"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Diagonal background to secondary"
+msgstr "Diagonal background to secondary"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Diagonal secondary to background"
+msgstr "Diagonal secondary to background"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Diagonal primary to foreground"
+msgstr "Diagonal primary to foreground"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Vertical tertiary to background"
+msgstr "Vertical tertiary to background"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Vertical secondary to background"
+msgstr "Vertical secondary to background"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Vertical secondary to tertiary"
+msgstr "Vertical secondary to tertiary"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr "Tertiary"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr "Secondary"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr "Primary"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Background"
+msgstr "Background"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Foreground"
+msgstr "Foreground"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Source Serif Pro"
+msgstr "Source Serif Pro"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System Font"
+msgstr "System Font"
 
 #: inc/patterns/query-text-grid.php:6
 msgid "Text-based grid of posts"
@@ -46,6 +200,10 @@ msgstr "Grid of posts"
 #: inc/patterns/query-default.php:6
 msgid "Default posts"
 msgstr "Default posts"
+
+#: inc/patterns/page-sidebar-poster.php:56
+msgid "The Grand Theater<br>154 Eastern Avenue<br>Maryland NY, 12345"
+msgstr "The Grand Theater<br>154 Eastern Avenue<br>Maryland NY, 12345"
 
 #: inc/patterns/page-sidebar-poster.php:52
 msgid "Location"
@@ -115,6 +273,11 @@ msgstr "Screening"
 msgid "Page layout with image, text and video"
 msgstr "Page layout with image, text and video"
 
+#: inc/patterns/page-layout-image-and-text.php:27
+#: inc/patterns/page-layout-two-columns.php:36
+msgid "Oh hello. My name’s Angelo, and I operate this blog. I was born in Portland, but I currently live in upstate New York. You may recognize me from publications with names like <a href=\"#\">Eagle Beagle</a> and <a href=\"#\">Mourning Dive</a>. I write for a living.<br><br>I usually use this blog to catalog extensive lists of birds and other things that I find interesting. If you find an error with one of my lists, please keep it to yourself.<br><br>If that’s not your cup of tea, <a href=\"#\">I definitely recommend this tea</a>. It’s my favorite."
+msgstr "Oh hello. My name’s Angelo, and I operate this blog. I was born in Portland, but I currently live in upstate New York. You may recognize me from publications with names like <a href=\"#\">Eagle Beagle</a> and <a href=\"#\">Mourning Dive</a>. I write for a living.<br><br>I usually use this blog to catalogue extensive lists of birds and other things that I find interesting. If you find an error with one of my lists, please keep it to yourself.<br><br>If that’s not your cup of tea, <a href=\"#\">I definitely recommend this tea</a>. It’s my favourite."
+
 #: inc/patterns/page-layout-image-and-text.php:15
 msgctxt "Short for to be determined"
 msgid "TBD"
@@ -139,11 +302,6 @@ msgstr "Edvard<br>Smith"
 #: inc/patterns/page-about-solid-color.php:6
 msgid "About page on solid color background"
 msgstr "About page on solid colour background"
-
-#: inc/patterns/page-layout-image-and-text.php:27
-#: inc/patterns/page-layout-two-columns.php:36
-msgid "Oh hello. My name’s Angelo, and I operate this blog. I was born in Portland, but I currently live in upstate New York. You may recognize me from publications with names like <a href=\"#\">Eagle Beagle</a> and <a href=\"#\">Mourning Dive</a>. I write for a living.<br><br>I usually use this blog to catalog extensive lists of birds and other things that I find interesting. If you find an error with one of my lists, please keep it to yourself.<br><br>If that’s not your cup of tea, <a href=\"#\">I definitely recommend this tea</a>. It’s my favorite."
-msgstr "Oh hello. My name’s Angelo, and I operate this blog. I was born in Portland, but I currently live in upstate New York. You may recognize me from publications with names like <a href=\"#\">Eagle Beagle</a> and <a href=\"#\">Mourning Dive</a>. I write for a living.<br><br>I usually use this blog to catalogue extensive lists of birds and other things that I find interesting. If you find an error with one of my lists, please keep it to yourself.<br><br>If that’s not your cup of tea, <a href=\"#\">I definitely recommend this tea</a>. It’s my favourite."
 
 #: inc/patterns/page-about-simple-dark.php:22
 msgid "Oh hello. My name’s Jesús, and you’ve found your way to my website. I’m an avid bird watcher, and I also broadcast my own radio show on Tuesday evenings at 11PM EDT."
@@ -328,6 +486,10 @@ msgstr "Logo, navigation, and social links header with black background"
 #: inc/patterns/header-logo-navigation-offset-tagline.php:6
 msgid "Logo, navigation, and offset tagline Header"
 msgstr "Logo, navigation, and offset tagline Header"
+
+#: inc/patterns/header-logo-navigation-gray-background.php:6
+msgid "Logo and navigation header with gray background"
+msgstr "Logo and navigation header with grey background"
 
 #: inc/patterns/header-large-dark.php:24
 #: inc/patterns/hidden-heading-and-bird.php:14
@@ -526,6 +688,11 @@ msgstr "Amy Jensen"
 msgid "May 18th, 2022, 7 PM"
 msgstr "May 18th, 2022, 7 PM"
 
+#: inc/patterns/general-list-events.php:61
+#: inc/patterns/general-list-events.php:109
+msgid "The Swell Theater<br>120 River Rd.<br>Rainfall, NH"
+msgstr "The Swell Theatre<br>120 River Rd.<br>Hope, BC"
+
 #: inc/patterns/general-list-events.php:55
 msgid "Doug Stilton"
 msgstr "Doug Stilton"
@@ -533,6 +700,11 @@ msgstr "Doug Stilton"
 #: inc/patterns/general-list-events.php:49
 msgid "May 16th, 2022, 6 PM"
 msgstr "May 16th, 2022, 6 PM"
+
+#: inc/patterns/general-list-events.php:37
+#: inc/patterns/general-list-events.php:85
+msgid "The Vintagé Theater<br>245 Arden Rd.<br>Gardenville, NH"
+msgstr "The Vintagé Theatre<br>245 Arden Rd.<br>Canmore, AB"
 
 #: inc/patterns/general-list-events.php:31
 msgid "Jesús Rodriguez"
@@ -712,28 +884,14 @@ msgstr "Footers"
 msgid "Featured"
 msgstr "Featured"
 
-#: inc/patterns/page-sidebar-poster.php:56
-msgid "The Grand Theater<br>154 Eastern Avenue<br>Maryland NY, 12345"
-msgstr "The Grand Theater<br>154 Eastern Avenue<br>Maryland NY, 12345"
-
-#: inc/patterns/general-list-events.php:61
-#: inc/patterns/general-list-events.php:109
-msgid "The Swell Theater<br>120 River Rd.<br>Rainfall, NH"
-msgstr "The Swell Theatre<br>120 River Rd.<br>Hope, BC"
-
-#: inc/patterns/general-list-events.php:37
-#: inc/patterns/general-list-events.php:85
-msgid "The Vintagé Theater<br>245 Arden Rd.<br>Gardenville, NH"
-msgstr "The Vintagé Theatre<br>245 Arden Rd.<br>Canmore, AB"
-
-#. Author of the theme
-msgid "the WordPress team"
-msgstr "the WordPress team"
+#. Theme URI of the theme
+msgid "https://wordpress.org/themes/twentytwentytwo/"
+msgstr "https://wordpress.org/themes/twentytwentytwo/"
 
 #. Author URI of the theme
 msgid "https://wordpress.org/"
 msgstr "https://en-ca.wordpress.org/"
 
-#. Theme URI of the theme
-msgid "https://github.com/wordpress/twentytwentytwo/"
-msgstr "https://github.com/wordpress/twentytwentytwo/"
+#. Author of the theme
+msgid "the WordPress team"
+msgstr "the WordPress team"
