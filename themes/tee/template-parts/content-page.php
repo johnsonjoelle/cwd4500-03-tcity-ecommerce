@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( is_woocommerce() || is_cart() || is_checkout() || is_account_page() ) : ?>
+	<?php if ( is_woocommerce() || is_cart() || is_checkout() || is_account_page() || is_product() ) : ?>
 		<nav id="tee_woocommerce_nav">
 			<?php
 			wp_nav_menu(

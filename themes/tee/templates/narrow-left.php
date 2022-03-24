@@ -2,10 +2,7 @@
 /**
  * Template Name: Narrow Left
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
+ * This template pushes content to the left leaving space to the right.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

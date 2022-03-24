@@ -3,7 +3,7 @@
  * Template Name: Blue Bar
  *
  * With this template "wide" and "full" content width options
- * are restricted.
+ * are restricted and a blue line borders the content on the left side.
  *
  * @package Salted_Tee
  */

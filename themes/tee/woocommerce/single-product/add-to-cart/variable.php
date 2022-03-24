@@ -2,13 +2,10 @@
 /**
  * Variable product add to cart
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/add-to-cart/variable.php.
+ * This template overides the template under plugins/woocommerce/single-product/add-to-cart/variable.php.
  *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (the theme developer) will need to copy the new files to your theme to
- * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
+ * If the original woocommerce template is updated, this template will need
+ * to be updated to maintain compatibility.
  *
  * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
