@@ -81,6 +81,22 @@ if ( ! function_exists( 'tee_posted_by' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'tee_designed_by' ) ) :
+	/**
+	 * Prints HTML with meta information for the current author.
+	 */
+	function tee_designed_by() {
+		$byline = sprintf(
+			/* translators: %s: post author. */
+			esc_html_x( 'By %s', 'post author', 'tee' ),
+			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		);
+
+		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+	}
+endif;
+
 if ( ! function_exists( 'tee_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.

@@ -30,13 +30,13 @@ get_header();
 
 			if ( !is_front_page() && is_home() ) {
 				?>
-				<section class="tee-blog-post">
+				<section class="tee-blog-post grid-x">
 					<?php
 					while ( have_posts() ) :
 						the_post();
 						if ( is_sticky() ) :
 						?>
-							<section class="entry-content">
+							<section class="entry-content small-12">
 								<div class="tee-featured-post">
 									<h2>Featured Post</h2>
 									<?php get_template_part( 'template-parts/content', 'excerpt' ); ?>
@@ -45,17 +45,47 @@ get_header();
 						<?php
 						endif;
 					endwhile; ?>
-					<section class="entry-content">
-						<div class="tee-posts-list">
-							<h2>Recent Posts</h2>
-						<?php
-							while ( have_posts() ) :
-								the_post();
-								if ( !is_sticky() ) :
-									get_template_part( 'template-parts/content', 'excerpt' ); 
+					<section class="entry-content small-12">
+						<div class="grid-x">
+							<div class="tee-posts-list small-12 medium-8 large-9">
+								<h2>Recent Posts</h2>
+							<?php
+								while ( have_posts() ) :
+									the_post();
+									if ( !is_sticky() ) :
+										get_template_part( 'template-parts/content', 'excerpt' ); 
+									endif;
+								endwhile;
+							?>
+							</div>
+							<?php 
+							$design_args = array(
+								'post_type' => array( 'tee_design' ),
+								'post_status' => 'publish',
+								'posts_per_page' => '3',
+								'orderby' => 'date'
+							);
+							?>
+							<aside class="tee-design-sidebar small-12 medium-4 large-3">
+								<?php 
+								$design_query = new WP_Query( $design_args );
+
+								if ( $design_query->have_posts() ) :
+									while ( $design_query->have_posts() ) :
+										?> <div class="tee-design-sidebar-post"> <?php
+											$design_query->the_post();
+											the_post_thumbnail();
+											?> <div class="tee-design-info"> <?php
+											the_title( '<h2>', '</h2>' );
+											tee_designed_by();
+											?> </div> 
+										</div> 
+										<?php
+									endwhile;
+									wp_reset_postdata();
 								endif;
-							endwhile;
-						?>
+								?>
+							</aside>
 						</div>
 					</section>
 				</section> <?php

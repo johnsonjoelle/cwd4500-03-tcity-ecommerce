@@ -209,8 +209,15 @@ body {
     margin-right: 10px;
 }
 /* Regular Posts */
+.tee-blog-post .entry-content > .grid-x {
+    padding: 0;
+}
 .tee-posts-list {
     border-left: 8px solid var(--colour-tblue);
+    padding-left: 1rem;
+}
+.tee-blog-post .tee-posts-list {
+    padding-right: 2rem;
 }
 .tee-posts-list.tee-designs-list {
     border-left: 8px solid var(--colour-tred);
@@ -252,4 +259,37 @@ body {
 .tee-posts-list .post-thumbnail {
     max-height: 220px;
     overflow: hidden;
+}
+/* Design Sidebar (WP_Query) */
+.tee-design-sidebar {
+    padding-left: 1rem;
+    border-left: 8px solid var(--colour-tred);
+}
+.tee-design-sidebar h2 {
+    font-size: var(--fontsize-above-avg);
+    color: var(--colour-twhite);
+    margin-bottom: 0;
+}
+.tee-design-sidebar .byline {
+    font-size: var(--fontsize-extra-small);
+    color: var(--colour-twhite);
+}
+.tee-design-sidebar .byline a {
+    color: var(--colour-tblue);
+}
+.tee-design-sidebar-post {
+    display: grid;
+    height: max-content;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr max-content;
+}
+.tee-design-sidebar-post img {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+}
+.tee-design-sidebar-post .tee-design-info {
+    grid-column: 1/-1;
+    grid-row: 2/-1;
+    background-color: #ee4d4d60;
+    padding: 10px;
 }
