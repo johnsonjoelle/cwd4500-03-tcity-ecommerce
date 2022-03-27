@@ -1,15 +1,15 @@
 /* 
 This is the css file for page styling
 
-Table of Contents:
-1. Variables
+Contents:
+1. Global Variables
 2. Content Widths
 3. Page Wraps
 4. Links
 5. Front-page
 6. Header
 7. Page Templates
-8. Blog Page
+8. Blog/Archive Page
 */
 
 /* Variables */
@@ -174,7 +174,7 @@ body {
     max-width: 550px !important;
 }
 
-/* Blog Page */
+/* Blog/Archive Page */
 /* Featured Post */
 .tee-blog-post .tee-featured-post {
     background-color: var(--colour-tblack);
@@ -207,15 +207,21 @@ body {
 .tee-posts-list {
     border-left: 8px solid var(--colour-tblue);
 }
-.tee-blog-post .entry-title {
+.tee-posts-list.tee-designs-list {
+    border-left: 8px solid var(--colour-tred);
+}
+.tee-blog-post .entry-title, 
+.tee-posts-list .entry-title {
     margin-top: 10px;
     margin-bottom: 0;
     font-size: var(--fontsize-below-medium);
 }
-.tee-blog-post .entry-title a {
+.tee-blog-post .entry-title a, 
+.tee-posts-list .entry-title a {
     color: var(--colour-tblack);
 }
-.tee-blog-post .entry-title a:hover {
+.tee-blog-post .entry-title a:hover,
+.tee-posts-list .entry-title a:hover {
     color: var(--colour-tblue);
 }
 .tee-blog-post .entry-meta {
@@ -237,4 +243,8 @@ body {
 }
 .tee-posts-list > h2 {
     margin-bottom: 1.5rem;
+}
+.tee-posts-list .post-thumbnail {
+    max-height: 220px;
+    overflow: hidden;
 }
