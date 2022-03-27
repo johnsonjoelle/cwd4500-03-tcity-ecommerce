@@ -70,7 +70,7 @@ body {
 }
 
 /* Links */
-.site-main a {
+.site-main a:not(.button) {
     color: var(--colour-tred);
 }
 .site-main h1 a, .site-main h2 a, .site-main h3 a {
@@ -292,4 +292,29 @@ body {
     grid-row: 2/-1;
     background-color: #ee4d4d60;
     padding: 10px;
+}
+
+/* Popular Designs (WP_Query) */
+.tee-entry-footer-wide {
+    max-width: 1190px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+.tee-popular-designs-header {
+    background-color: var(--colour-tblue);
+    color: var(--colour-twhite);
+    margin-bottom: 30px;
+    padding: 10px 20px;
+}
+.tee-popular-designs-header h2,
+.tee-popular-designs-header p,
+.tee-popular-design h2 {
+    margin-bottom: 0;
+}
+.tee-popular-design h2 {
+    font-size: var(--fontsize-above-avg);
+}
+.tee-popular-design .byline {
+    font-size: var(--fontsize-small);
 }

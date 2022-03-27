@@ -37,11 +37,6 @@
 		<?php
 		the_content();
 
-		if ( ! is_shop() ) : ?>
-			<h1 class="entry-title">Browse Designs</h1>
-			<!-- dislay woocommerce archive for design -->
-		<?php endif;
-
 		wp_link_pages(
 			array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'tee' ),
