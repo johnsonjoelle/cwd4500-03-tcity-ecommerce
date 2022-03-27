@@ -35,3 +35,25 @@ function tee_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'tee_pingback_header' );
+
+// /**
+//  * Creates continue reading text.
+//  */
+// function tee_continue_reading_text() {
+// 	$continue_reading = sprintf(
+// 		/* translators: %s: Name of current post. */
+// 		esc_html__( 'Continue reading %s', 'tee' ),
+// 		the_title( '<span class="screen-reader-text">', '</span>', false )
+// 	);
+
+// 	return $continue_reading;
+// }
+
+// /**
+//  * Creates the continue reading link for excerpt.
+//  */
+// function tee_continue_reading_link_excerpt() {
+// 	if ( ! is_admin() ) {
+// 		return '&hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '">' . tee_continue_reading_text() . '</a>';
+// 	}
+// }

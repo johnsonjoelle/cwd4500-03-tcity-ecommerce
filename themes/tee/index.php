@@ -19,7 +19,7 @@ get_header();
 
 		<?php
 		if ( have_posts() ) :
-
+			// Check if page is blog page
 			if ( is_home() && ! is_front_page() ) :
 				?>
 				<header>
@@ -28,21 +28,53 @@ get_header();
 				<?php
 			endif;
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			if ( !is_front_page() && is_home() ) {
+				?>
+				<section class="tee-blog-post">
+				<?php
+				while ( have_posts() ) :
+					the_post();
+					if ( is_sticky() ) :
+					?>
+						<section class="tee-featured-post">
+							<?php get_template_part( 'template-parts/content', 'excerpt' ); ?>
+						</section>
+					<?php
+					endif;
+				endwhile;
+				while ( have_posts() ) :
+					the_post();
+					if ( !is_sticky() ) :
+						?>
+						<section class="tee-posts-list">
+							<?php get_template_part( 'template-parts/content', 'excerpt' ); ?>
+						</section>
+						<?php
+					endif;
+				endwhile;
+				?> </section> <?php
+			} else {
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
 
-			endwhile;
+					if ( is_blog() ) :
+						get_template_part( 'template-parts/content', 'excerpt' );
+					else :
+						/*
+						* Include the Post-Type-specific template for the content.
+						* If you want to override this in a child theme, then include a file
+						* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+						*/
+						get_template_part( 'template-parts/content', get_post_type() );
+					endif;
+
+				endwhile;
+			}
 
 			the_posts_navigation();
-
+			
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
@@ -53,5 +85,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

@@ -104,6 +104,13 @@ function tee_content_width() {
 add_action( 'after_setup_theme', 'tee_content_width', 0 );
 
 /**
+ * Determine if page lists more than one post
+ */
+function is_blog () {
+    return ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag() && 'post' == get_post_type());
+}
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
@@ -155,6 +162,11 @@ function tee_scripts() {
 		array( 'jquery', 'what-input-script' ),
 		'6.7.4',
 		true
+	);
+
+	wp_enqueue_style(
+		'page-style',
+		get_template_directory_uri() . '/assets/css/page-styles.css',
 	);
 	
 	wp_enqueue_style(
