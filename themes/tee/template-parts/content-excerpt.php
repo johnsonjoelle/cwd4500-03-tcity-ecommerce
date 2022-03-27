@@ -10,13 +10,16 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<?php tee_post_thumbnail(); ?>
+
 	<header class="entry-header">
 		<?php
 		if ( ! is_singular( 'product' ) ) {
 			if ( is_singular() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
 			else :
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				the_title( '<h2 class="entry-title tee-excerpt-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			endif;
 		}
 
@@ -31,9 +34,9 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php tee_post_thumbnail(); ?>
+	
 
-	<div class="entry-content">
+	<div class="tee-excerpt-content">
 		<?php
 		the_excerpt();
 
@@ -44,9 +47,9 @@
 			)
 		);
 		?>
-	</div><!-- .entry-content -->
+	</div><!-- .tee-excerpt-content -->
 
-	<footer class="entry-footer">
+	<footer class="tee-excerpt-footer">
 		<?php tee_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer><!-- .tee-excerpt-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

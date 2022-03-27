@@ -36,8 +36,11 @@ get_header();
 					the_post();
 					if ( is_sticky() ) :
 					?>
-						<section class="tee-featured-post">
-							<?php get_template_part( 'template-parts/content', 'excerpt' ); ?>
+						<section class="entry-content">
+							<div class="tee-featured-post">
+								<h2>Featured Post</h2>
+								<?php get_template_part( 'template-parts/content', 'excerpt' ); ?>
+							</div>
 						</section>
 					<?php
 					endif;
