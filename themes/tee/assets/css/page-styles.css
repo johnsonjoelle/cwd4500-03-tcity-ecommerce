@@ -196,6 +196,11 @@ body {
     font-size: var(--fontsize-above-avg);
     color: var(--colour-tblack);
 }
+.page-header.entry-header {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+}
 .tee-featured-post .post {
     background-color: var(--colour-twhite);
 }
