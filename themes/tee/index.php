@@ -31,31 +31,34 @@ get_header();
 			if ( !is_front_page() && is_home() ) {
 				?>
 				<section class="tee-blog-post">
-				<?php
-				while ( have_posts() ) :
-					the_post();
-					if ( is_sticky() ) :
-					?>
-						<section class="entry-content">
-							<div class="tee-featured-post">
-								<h2>Featured Post</h2>
-								<?php get_template_part( 'template-parts/content', 'excerpt' ); ?>
-							</div>
-						</section>
 					<?php
-					endif;
-				endwhile;
-				while ( have_posts() ) :
-					the_post();
-					if ( !is_sticky() ) :
+					while ( have_posts() ) :
+						the_post();
+						if ( is_sticky() ) :
 						?>
-						<section class="tee-posts-list">
-							<?php get_template_part( 'template-parts/content', 'excerpt' ); ?>
-						</section>
+							<section class="entry-content">
+								<div class="tee-featured-post">
+									<h2>Featured Post</h2>
+									<?php get_template_part( 'template-parts/content', 'excerpt' ); ?>
+								</div>
+							</section>
 						<?php
-					endif;
-				endwhile;
-				?> </section> <?php
+						endif;
+					endwhile; ?>
+					<section class="entry-content">
+						<div class="tee-posts-list">
+							<h2>Recent Posts</h2>
+						<?php
+							while ( have_posts() ) :
+								the_post();
+								if ( !is_sticky() ) :
+									get_template_part( 'template-parts/content', 'excerpt' ); 
+								endif;
+							endwhile;
+						?>
+						</div>
+					</section>
+				</section> <?php
 			} else {
 
 				/* Start the Loop */

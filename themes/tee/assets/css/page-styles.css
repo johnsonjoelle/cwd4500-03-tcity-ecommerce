@@ -204,6 +204,9 @@ body {
     margin-right: 10px;
 }
 /* Regular Posts */
+.tee-posts-list {
+    border-left: 8px solid var(--colour-tblue);
+}
 .tee-blog-post .entry-title {
     margin-top: 10px;
     margin-bottom: 0;
@@ -227,4 +230,11 @@ body {
 .tee-excerpt-footer span {
     font-size: var(--fontsize-extra-small);
     margin-right: 15px;
+}
+.tee-posts-list .entry-header {
+    padding-left: 0;
+    padding-right: 0;
+}
+.tee-posts-list > h2 {
+    margin-bottom: 1.5rem;
 }
