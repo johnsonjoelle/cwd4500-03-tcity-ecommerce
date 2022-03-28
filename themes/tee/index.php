@@ -67,6 +67,7 @@ get_header();
 							);
 							?>
 							<aside class="tee-design-sidebar small-12 medium-4 large-3">
+								<h4>Recent Designs</h4>
 								<?php 
 								$design_query = new WP_Query( $design_args );
 

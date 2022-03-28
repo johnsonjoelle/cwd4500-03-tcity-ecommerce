@@ -256,9 +256,8 @@ body {
 .tee-posts-list > h2 {
     margin-bottom: 1.5rem;
 }
-.tee-posts-list .post-thumbnail {
-    max-height: 220px;
-    overflow: hidden;
+.tee-posts-list .tee_design {
+    margin-bottom: 40px;
 }
 /* Design Sidebar (WP_Query) */
 .tee-design-sidebar {
@@ -282,6 +281,7 @@ body {
     height: max-content;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr max-content;
+    margin-bottom: 20px;
 }
 .tee-design-sidebar-post img {
     grid-column: 1/-1;
@@ -290,7 +290,7 @@ body {
 .tee-design-sidebar-post .tee-design-info {
     grid-column: 1/-1;
     grid-row: 2/-1;
-    background-color: #ee4d4d60;
+    background-color: #ee4d4d95;
     padding: 10px;
 }
 
