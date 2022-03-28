@@ -42,10 +42,40 @@
     }
 }
 @media screen and (max-width: 720px) {
+    #site-navigation {
+        display: flex;
+        flex-direction: column;
+    }
+    #icon-menu-container {
+        height: 60px;
+        width: 60px;
+        padding-top: 8px;
+        align-self: flex-end;
+        justify-content: center;
+        cursor: pointer;
+    }
     #icon-menu {
         display: block;
-        height: 60px;
-        width: auto;
+        height: auto;
+        width: 90%;
+    }
+    .menu-main-menu-container {
+        display: none;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        background-color: var(--colour-tblack);
+        z-index: 99;
+        width: 100%;
+    }
+    .menu-main-menu-container.tee-show {
+        display: block;
+    }
+    .main-navigation .menu-item a {
+        color: var(--colour-twhite);
+    }
+    #primary-menu {
+        flex-direction: column;
     }
 }
 

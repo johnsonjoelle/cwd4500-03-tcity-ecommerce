@@ -32,17 +32,18 @@
 	<?php else : ?>
 	<header id="masthead" class="site-header grid-x  align-middle">
 	<?php endif; ?>
-		<div class="site-branding cell small-12 medium-3">
+		<div class="site-branding cell small-6 medium-3">
 			<?php
 			// Display the custom logo uploaded to the site
 			the_custom_logo();
 			?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation cell small-12 medium-9">
-			<!-- Add button do normal css/js link to 'primary-menu' id tag -->
-			<!-- #icon-menu visible on mobile screens. function to open menu in !link to menu -->
-			<object id="icon-menu" data="../wp-content/themes/tee/assets/img/icons/menu-icon.svg" type="image/svg+xml"></object>
+		<nav id="site-navigation" class="main-navigation cell small-6 medium-9">
+			<!-- #icon-menu visible on mobile screens. function in menu.js -->
+			<div id="icon-menu-container">
+				<img id="icon-menu" src="../wp-content/themes/tee/assets/img/icons/menu-icon.png" alt="menu">
+			</div>
 			<?php
 			wp_nav_menu(
 				array(

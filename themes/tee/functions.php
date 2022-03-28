@@ -208,6 +208,14 @@ function tee_scripts() {
 		);
 	}
 
+	wp_enqueue_script(
+		'menu-script',
+		get_template_directory_uri() . '/assets/js/menu.js',
+		array(),
+		null,
+		true
+	);
+
 	if ( is_product() ) {
 		wp_enqueue_script(
 			'tee-product-replace-txt-script',
