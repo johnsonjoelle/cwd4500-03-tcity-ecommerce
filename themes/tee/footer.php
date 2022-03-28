@@ -29,6 +29,7 @@ $popular_args = array(
 			</div>
 			<div class="grid-x grid-margin-y grid-margin-x tee-popular-designs">
 				<?php 
+				// WP_Query to display popular design posts
 				$popular_query = new WP_Query( $popular_args );
 
 				if ( $popular_query->have_posts() ) :
@@ -38,7 +39,7 @@ $popular_args = array(
 							<?php
 							$popular_query->the_post();
 							the_post_thumbnail();
-							the_title( '<h2>', '</h2>' );
+							the_title( '<h2><a href="' . esc_url( get_permalink() ) . '"rel="bookmark">', '</a></h2>' );
 							tee_designed_by();
 							?> 
 						</div> 
@@ -52,8 +53,8 @@ $popular_args = array(
 		<?php endif; ?>
 		<div class="tee-footer-top">
 			<p><?php bloginfo( 'name' ); ?> &copy; Copyright 2022</p>
-		</div>
-		<div class="tee-footer-divider"></div>
+		</div> <!-- .tee-footer-top -->
+		<div class="tee-footer-divider"></div> <!-- decorative div -->
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'tee' ) ); ?>">
 				<?php

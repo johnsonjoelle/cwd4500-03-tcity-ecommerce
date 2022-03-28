@@ -77,7 +77,7 @@ get_header();
 											$design_query->the_post();
 											the_post_thumbnail();
 											?> <div class="tee-design-info"> <?php
-											the_title( '<h2>', '</h2>' );
+											the_title( '<h2><a href="' . esc_url( get_permalink() ) . '"rel="bookmark">', '</a></h2>' );
 											tee_designed_by();
 											?> </div> 
 										</div> 

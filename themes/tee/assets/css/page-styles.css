@@ -266,6 +266,7 @@ body {
 }
 .tee-design-sidebar h2 {
     font-size: var(--fontsize-above-avg);
+    line-height: 1.1;
     color: var(--colour-twhite);
     margin-bottom: 0;
 }
@@ -290,8 +291,14 @@ body {
 .tee-design-sidebar-post .tee-design-info {
     grid-column: 1/-1;
     grid-row: 2/-1;
-    background-color: #ee4d4d95;
+    background-color: #03030395;
     padding: 10px;
+}
+.tee-design-sidebar-post .tee-design-info h2 a {
+    color: var(--colour-twhite);
+}
+.tee-design-sidebar-post .tee-design-info h2 a:hover {
+    color: var(--colour-tblue);
 }
 
 /* Popular Designs (WP_Query) */
