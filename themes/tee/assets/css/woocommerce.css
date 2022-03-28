@@ -1,3 +1,22 @@
+/* 
+This is the css file for the styling of woocommerce blocks and content
+
+Contents:
+1. Navigation
+2. Container
+3. Store Page
+4. Product Info Layout
+5. Product Title
+6. Product Images
+7. Summary Layout
+8. Variations Layout
+9. Product Tabs
+10. Login Page
+11. My Account Page
+12. Cart Page
+13. Checkout Page
+*/
+
 /* Navigation */
 #store-menu {
     box-shadow: 0 3px 6px #00000016;

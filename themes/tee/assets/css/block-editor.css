@@ -1,4 +1,32 @@
+/* 
+This is the css file for the theme styles of WordPress blocks
 
+Contents:
+1. Captions
+2. Page Title
+3. Headings
+4. List Blocks
+5. Button Blocks
+6. Quote Blocks
+7. Pullquote Blocks
+8. Code Block
+9. Preformatted Code Block
+10. Table Blocks
+11. Verse Blocks
+12. Gallery Blocks
+13. Audio
+14. Cover Block
+15. File Block
+16.  Media & Text Block
+17. Video Block
+18. Groups Block
+19. Post Thumbnail
+20. Calender
+21. Comments Block
+22. Search Block
+23. Author Name and Post Date
+24. Social Links
+*/
 
 /* Captions */
 figcaption {
@@ -303,50 +331,4 @@ blockquote {
 /* Social Links */
 .wp-block-social-links {
     font-size: var(--fontsize-above-avg);
-}
-
-/* Footer */
-.site-footer p {
-    margin-bottom: 0;
-}
-.tee-footer-top {
-    background-color: var(--colour-tblack);
-    color: var(--colour-twhite);
-    font-size: var(--fontsize-small);
-    padding: 20px;
-    margin-bottom: 5px;
-}
-.tee-footer-divider {
-    min-height: 15px;
-    background-color: var(--colour-tblack);
-    color: var(--colour-twhite);
-}
-.site-info {
-    margin: 8px 0;
-    padding-left: 20px;
-}
-.entry-footer span {
-    display: block;
-}
-.post-navigation, .comments-area {
-    max-width: 990px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    padding: 0 25px;
-}
-
-/* Plugin Overrides */
-/* WPForms Overrides */
-div.wpforms-container-full .wpforms-form button[type="submit"].wp-block-button {
-    height: 46px;
-    background-color: var(--colour-tblack);
-    color: var(--colour-twhite);
-    border-radius: 3px;
-    font-size: var(--fontsize-below-medium);
-    transition: background-color 0.4s;
-    /* align-items: center; */
-}
-div.wpforms-container-full .wpforms-form button[type="submit"].wp-block-button:hover {
-    background-color: var(--colour-tblue);
 }

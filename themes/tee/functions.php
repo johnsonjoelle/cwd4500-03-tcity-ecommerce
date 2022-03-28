@@ -104,7 +104,9 @@ function tee_content_width() {
 add_action( 'after_setup_theme', 'tee_content_width', 0 );
 
 /**
- * Determine if page lists more than one post
+ * Function to determine if the page lists more than one post
+ * 
+ * @link https://wordpress.stackexchange.com/a/141668
  */
 function is_blog () {
     return ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag() && 'post' == get_post_type());

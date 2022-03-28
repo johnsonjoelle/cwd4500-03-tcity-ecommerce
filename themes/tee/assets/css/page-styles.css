@@ -1,5 +1,5 @@
 /* 
-This is the css file for page styling
+This is the css file for general styling of page content
 
 Contents:
 1. Global Variables
@@ -9,7 +9,10 @@ Contents:
 5. Front-page
 6. Header
 7. Page Templates
-8. Blog/Archive Page
+8. Blog/Archive Pages
+9. Popular Designs (WP_Query)
+10. Footer
+11. Plugin Overrides
 */
 
 /* Variables */
@@ -324,4 +327,50 @@ body {
 }
 .tee-popular-design .byline {
     font-size: var(--fontsize-small);
+}
+
+/* Footer */
+.site-footer p {
+    margin-bottom: 0;
+}
+.tee-footer-top {
+    background-color: var(--colour-tblack);
+    color: var(--colour-twhite);
+    font-size: var(--fontsize-small);
+    padding: 20px;
+    margin-bottom: 5px;
+}
+.tee-footer-divider {
+    min-height: 15px;
+    background-color: var(--colour-tblack);
+    color: var(--colour-twhite);
+}
+.site-info {
+    margin: 8px 0;
+    padding-left: 20px;
+}
+.entry-footer span {
+    display: block;
+}
+.post-navigation, .comments-area {
+    max-width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 0 25px;
+}
+
+/* Plugin Overrides */
+/* WPForms Overrides */
+div.wpforms-container-full .wpforms-form button[type="submit"].wp-block-button {
+    height: 46px;
+    background-color: var(--colour-tblack);
+    color: var(--colour-twhite);
+    border-radius: 3px;
+    font-size: var(--fontsize-below-medium);
+    transition: background-color 0.4s;
+    /* align-items: center; */
+}
+div.wpforms-container-full .wpforms-form button[type="submit"].wp-block-button:hover {
+    background-color: var(--colour-tblue);
 }

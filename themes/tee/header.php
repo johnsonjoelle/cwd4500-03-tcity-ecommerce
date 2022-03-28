@@ -26,6 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'tee' ); ?></a>
 
 	<?php if ( is_front_page() ) :?>
+	<!-- If page is front page wrap page in div#tee-front-page-wrapper -->
 	<div id="tee-front-page-wrapper">
 		<header id="masthead" class="site-header white-header grid-x align-middle">
 	<?php else : ?>
@@ -33,12 +34,14 @@
 	<?php endif; ?>
 		<div class="site-branding cell small-12 medium-3">
 			<?php
+			// Display the custom logo uploaded to the site
 			the_custom_logo();
 			?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation cell small-12 medium-9">
 			<!-- Add button do normal css/js link to 'primary-menu' id tag -->
+			<!-- #icon-menu visible on mobile screens. function to open menu in !link to menu -->
 			<object id="icon-menu" data="../wp-content/themes/tee/assets/img/icons/menu-icon.svg" type="image/svg+xml"></object>
 			<?php
 			wp_nav_menu(

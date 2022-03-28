@@ -19,7 +19,7 @@ get_header();
 
 		<?php
 		if ( have_posts() ) :
-			// Check if page is blog page
+			// Check if page is the main blog page
 			if ( is_home() && ! is_front_page() ) :
 				?>
 				<header>
@@ -34,6 +34,7 @@ get_header();
 					<?php
 					while ( have_posts() ) :
 						the_post();
+						// Check if post is a sticky post (featured)
 						if ( is_sticky() ) :
 						?>
 							<section class="entry-content small-12">
@@ -52,6 +53,7 @@ get_header();
 							<?php
 								while ( have_posts() ) :
 									the_post();
+									// Ensure that the sticky post is not included in the normal post list
 									if ( !is_sticky() ) :
 										get_template_part( 'template-parts/content', 'excerpt' ); 
 									endif;
@@ -92,7 +94,7 @@ get_header();
 				</section> <?php
 			} else {
 
-				/* Start the Loop */
+				/* If page is not the main blog page, layout does not include featured post or design posts */
 				while ( have_posts() ) :
 					the_post();
 

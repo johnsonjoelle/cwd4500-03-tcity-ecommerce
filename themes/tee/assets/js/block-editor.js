@@ -1,3 +1,16 @@
+/*
+* This is the js file for registering block styles
+
+* Contents:
+1. Quote Blocks
+2. Table Blocks
+3. Image Blocks
+4. Media & Text Blocks
+5. Group Blocks
+6. Button Blocks
+7. Column Blocks
+*/
+
 // * Quote Blocks
 wp.domReady( function () {
     wp.blocks.unregisterBlockStyle( 'core/quote', 'plain' );
