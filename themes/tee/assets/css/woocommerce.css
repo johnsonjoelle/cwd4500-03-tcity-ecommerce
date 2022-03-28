@@ -325,7 +325,7 @@ input {
 .cart_totals table tr:first-child > th {
     border-left: 8px solid var(--colour-tblue);
 }
-.cart_totals table tr:nth-child(2n) > th {
+.cart_totals table tr:nth-child(2n) > td {
     border-left: 8px solid var(--colour-tred);
 }
 .cart-subtotal, .order-total {
@@ -340,6 +340,11 @@ input {
     padding-top: 10px;
     padding-bottom: 0;
 }
+/* tr.woocommerce-shipping-totals {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+} */
 
 /* Checkout Page */
 .tee-hidden {

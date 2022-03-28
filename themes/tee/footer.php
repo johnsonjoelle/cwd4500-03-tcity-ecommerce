@@ -27,7 +27,7 @@ $popular_args = array(
 				<h2>Popular Designs</h2>
 				<p?>Looking to grab and go? Check out these designs</p>
 			</div>
-			<div class="grid-x grid-margin-y grid-margin-x tee-popular-designs">
+			<div class="grid-x grid-margin-y grid-padding-x tee-popular-designs">
 				<?php 
 				// WP_Query to display popular design posts
 				$popular_query = new WP_Query( $popular_args );
