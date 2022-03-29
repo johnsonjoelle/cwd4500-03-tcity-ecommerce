@@ -75,6 +75,9 @@ ul, ol {
     padding: 0 1em;
     transition: background-color 0.4s;
 }
+.site-main .wp-block-button a.wp-block-button__link {
+    color: var(--colour-twhite);
+}
 .wp-block-button:hover,
 .wp-block-button:hover > *,
 a.button:hover,

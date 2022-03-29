@@ -38,7 +38,6 @@ Contents:
 
 /* Container */
 .entry-content > .woocommerce {
-    /* width: 1190px; */
     padding: 40px 25px 0;
 }
 
@@ -49,9 +48,13 @@ Contents:
 }
 ul.products {
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(6, 174px);
-    column-gap: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 40px;
+}
+ul.products > * {
+    max-width: 174px;
 }
 .woocommerce-LoopProduct-link,
 .woocommerce-LoopProduct-link .price {
@@ -76,7 +79,6 @@ ul.products {
     grid-template-columns: minmax(250px, 36.6%) 1fr;
     grid-template-rows: max-content max-content;
     gap: 30px;
-    /* width: inherit; */
 }
 .product_title.entry-title,
 .woocommerce-product-gallery {

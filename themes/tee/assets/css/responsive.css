@@ -1,3 +1,7 @@
+/* 
+This is the css file for the all responsive styling
+*/
+
 @media screen and (max-width: 1299px) {
     .has-x-large-font-size {
         font-size: calc(0.8 * var(--fontsize-extra-large));
@@ -25,6 +29,7 @@
         max-width: none;
         margin-left: -50%;
     }
+    /* Font Sizes */
     .has-xx-large-font-size {
         font-size: calc(0.7 * var(--fontsize-large));
     } 
@@ -39,6 +44,20 @@
     }
     .tee-front-page-banner .tee-banner-tagline {
         font-size: calc(1.2 * var(--fontsize-page-title));
+    }
+    .tee-front-page p.has-xx-large-font-size {
+        font-size: 35px !important;
+    }
+    .tee-front-page p.has-large-font-size {
+        font-size: 25px !important;
+    }
+    .tee-front-page p.has-x-large-font-size {
+        font-size: 30px !important;
+    }
+
+    /* Account Page */
+    .tee-order-link {
+        text-align: left;
     }
 }
 @media screen and (max-width: 720px) {
@@ -81,7 +100,7 @@
 
 @media screen and (max-width: 450px) {
     .entry-title {
-        font-size: calc(0.8 * var(--fontsize-page-title));
+        font-size: calc(0.6 * var(--fontsize-page-title));
     }
     .has-xx-large-font-size {
         font-size: calc(0.6 * var(--fontsize-large));
@@ -134,9 +153,8 @@
 
     /* Shop page */
     ul.products {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        row-gap: 40px;
+        justify-content: center;
+        margin-left: 0;
     }
 
     /* Secondary Nav (Shop Navigation) */
@@ -163,5 +181,28 @@
     }
     .shop_table.cart td.actions {
         text-align: center;
+    }
+
+    /* Column Block */
+    .wp-block-column {
+        padding: 0;
+    }
+    .wp-block-column p {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /* Front Page */
+    .tee-front-page p.has-xx-large-font-size {
+        font-size: 25px !important;
+    }
+    .tee-front-page p.has-large-font-size {
+        font-size: 25px !important;
+    }
+    .tee-front-page p.has-x-large-font-size {
+        font-size: 25px !important;
+    }
+    .tee-front-page .wp-block-column.is-vertically-aligned-center {
+        padding-top: 20px;
     }
 }
