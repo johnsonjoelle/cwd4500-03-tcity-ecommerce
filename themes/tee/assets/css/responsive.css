@@ -103,4 +103,44 @@
     .wp-container-620ede260b6f8 {
         flex-wrap: wrap;
     }
+    .wp-block-media-text.is-style-border-left-meditxt .wp-block-media-text__content {
+        margin-left: 0;
+    }
+    /* Blog Pages */
+    .tee-blog-post .tee-featured-post {
+        margin-top: 0;
+    }
+    .tee-featured-post .entry-header,
+    .post .entry-header {
+        margin-bottom: 10px;
+    }
+    .tee-posts-list > h2,
+    .tee-design-sidebar > h4 {
+        font-size: var(--fontsize-below-medium);
+        font-weight: bold;
+    }
+    .entry-header .entry-meta {
+        display: flex;
+        flex-direction: column;
+    }
+    .tee-excerpt-footer {
+        display: flex;
+        flex-direction: column;
+    }
+    .tee-design-sidebar {
+        margin-top: 25px;
+        padding-right: 1rem;
+    }
+
+    /* Shop page */
+    ul.products {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        row-gap: 40px;
+    }
+
+    /* Secondary Nav (Shop Navigation) */
+    #store-menu {
+        justify-content: center;
+    }
 }
