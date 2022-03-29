@@ -238,6 +238,9 @@ input {
 .woocommerce-MyAccount-navigation a:hover {
     color: var(--colour-tblue);
 }
+.woocommerce-MyAccount-navigation-link--downloads {
+    display: none;
+}
 .tee-account-main {
     padding: 0 25px;
     margin-bottom: 50px;

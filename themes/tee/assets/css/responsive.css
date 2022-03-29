@@ -143,4 +143,25 @@
     #store-menu {
         justify-content: center;
     }
+
+    /* Cart Page */
+    .cart_item {
+        grid-template-columns: 1fr;
+    }
+    .cart_item .product-price {
+        text-align: right;
+    }
+    .tee-cart-item-wrapper {
+        grid-template-columns: 60px 1fr 60px max-content;
+    }
+    /* .tee-product-info .variation dd:not(:first-child)*/
+    .tee-product-info .variation > *:not(.variation-Size) { 
+        display: none;
+    }
+    .tee-product-info .product-name {
+        white-space: nowrap;
+    }
+    .shop_table.cart td.actions {
+        text-align: center;
+    }
 }
